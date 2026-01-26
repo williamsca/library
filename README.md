@@ -1,2 +1,2 @@
 # library
-searchable online database of books that we own
+a searchable online database of books that we own
