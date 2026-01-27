@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Williams Family Library</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Williams Family Library</h1>
+    <p class="stats" id="stats">Loading...</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <input
+        type="search"
+        id="search"
+        placeholder="Search titles, authors, genres..."
+        autofocus
+      >
+
+      <div class="filters">
+        <select id="genre-filter">
+          <option value="">All genres</option>
+        </select>
+
+        <select id="sort">
+          <option value="title">Sort by title</option>
+          <option value="author">Sort by author</option>
+          <option value="year">Sort by year</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="results" class="book-grid">
+      <p class="loading">Loading books...</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built with <a href="https://openlibrary.org" target="_blank">Open Library</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

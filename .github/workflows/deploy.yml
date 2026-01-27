@@ -1,0 +1,59 @@
+name: Build and Deploy
+
+on:
+  # Manual trigger
+  workflow_dispatch:
+
+  # Scheduled: daily at 6am UTC
+  schedule:
+    - cron: '0 6 * * *'
+
+  # Optional: trigger on push to main
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/**'
+      - 'requirements.txt'
+      - '.github/workflows/deploy.yml'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Need full history to push cache updates
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Fetch CSV and build JSON
+        env:
+          DROPBOX_URL: ${{ secrets.DROPBOX_CSV_URL }}
+        run: |
+          python scripts/build.py
+
+      - name: Commit cache updates
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add cache/enrichment_cache.json
+          git diff --staged --quiet || git commit -m "Update enrichment cache [skip ci]"
+          git push || echo "No changes to push"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          exclude_assets: '.github,scripts,cache,requirements.txt,.gitignore,test_books.csv,book-database-implementation-plan.md'
