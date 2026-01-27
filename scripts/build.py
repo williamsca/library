@@ -219,8 +219,19 @@ def main():
     to_enrich = []
     for book in books:
         cache_key = make_cache_key(book['title'], book['author'])
+        current_isbn_override = book.get('isbn_override')
+
+        # Need enrichment if:
+        # 1. Not in cache at all, OR
+        # 2. isbn_override has changed
         if cache_key not in cache:
             to_enrich.append(book)
+        else:
+            cached_isbn_override = cache[cache_key].get('isbn_override_used')
+            if current_isbn_override != cached_isbn_override:
+                print(f"  ↻ isbn_override changed for '{book['title']}': "
+                      f"{cached_isbn_override or 'None'} → {current_isbn_override or 'None'}")
+                to_enrich.append(book)
 
     print(f"\nBooks needing enrichment: {len(to_enrich)}")
     print(f"Books already cached: {len(books) - len(to_enrich)}")
@@ -228,6 +239,13 @@ def main():
     # 5. Enrich new books
     if to_enrich:
         new_enrichments = enrich_books(to_enrich)
+
+        # Store isbn_override in cache for change detection
+        for book in to_enrich:
+            cache_key = make_cache_key(book['title'], book['author'])
+            if cache_key in new_enrichments:
+                new_enrichments[cache_key]['isbn_override_used'] = book.get('isbn_override')
+
         cache.update(new_enrichments)
 
         # Check error rate

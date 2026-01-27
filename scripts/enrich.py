@@ -119,6 +119,77 @@ def clean_genres(subjects: List[str]) -> List[str]:
     return cleaned[:5]  # Limit to 5 genres
 
 
+def enrich_by_isbn(isbn: str, title: str, author: str) -> dict:
+    """
+    Fetch book data directly by ISBN from Open Library.
+    Returns enrichment data dictionary.
+    """
+    print(f"  Querying by ISBN: {isbn} ({title})")
+
+    try:
+        # Fetch book data by ISBN
+        response = requests.get(
+            f'https://openlibrary.org/api/books',
+            params={
+                'bibkeys': f'ISBN:{isbn}',
+                'format': 'json',
+                'jscmd': 'data'
+            },
+            timeout=10
+        )
+        response.raise_for_status()
+        data = response.json()
+
+        isbn_key = f'ISBN:{isbn}'
+        if isbn_key not in data:
+            print(f"    ⚠ ISBN not found, falling back to title/author search")
+            return enrich_book(title, author)
+
+        book_data = data[isbn_key]
+
+        # Extract metadata
+        official_title = book_data.get('title')
+        authors = book_data.get('authors', [])
+        official_author = ', '.join([a.get('name', '') for a in authors]) if authors else None
+
+        # Get subjects
+        subjects = []
+        if 'subjects' in book_data:
+            subjects = [s.get('name', s) if isinstance(s, dict) else s for s in book_data['subjects']]
+
+        # Get work key
+        work_key = None
+        if 'works' in book_data and book_data['works']:
+            work_key = book_data['works'][0].get('key')
+
+        # Get publish year
+        year_published = None
+        if 'publish_date' in book_data:
+            # Try to extract year from publish_date
+            import re
+            match = re.search(r'\d{4}', book_data['publish_date'])
+            if match:
+                year_published = int(match.group())
+
+        print(f"    ✓ Found by ISBN: {official_title}")
+
+        return {
+            'official_title': official_title,
+            'official_author': official_author,
+            'isbn': isbn,
+            'year_published': year_published,
+            'subjects': subjects[:10],
+            'open_library_work_key': work_key,
+            'open_library_edition_key': book_data.get('key', '').split('/')[-1] if 'key' in book_data else None,
+            'match_confidence': 'isbn',  # Special confidence level for ISBN matches
+            'fetched_at': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
+        }
+
+    except requests.RequestException as e:
+        print(f"    ✗ API error, falling back to title/author search: {e}")
+        return enrich_book(title, author)
+
+
 def enrich_book(title: str, author: str) -> dict:
     """
     Query Open Library API for a single book.
@@ -232,7 +303,13 @@ def enrich_books(books: List[dict]) -> Dict[str, dict]:
             time.sleep(1.1)
 
         cache_key = make_cache_key(book['title'], book['author'])
-        results[cache_key] = enrich_book(book['title'], book['author'])
+
+        # Use ISBN-based enrichment if isbn_override is provided
+        isbn_override = book.get('isbn_override')
+        if isbn_override:
+            results[cache_key] = enrich_by_isbn(isbn_override, book['title'], book['author'])
+        else:
+            results[cache_key] = enrich_book(book['title'], book['author'])
 
         print(f"  [{i+1}/{total}] Progress: {((i+1)/total)*100:.0f}%")
 
