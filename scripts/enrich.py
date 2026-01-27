@@ -119,6 +119,78 @@ def clean_genres(subjects: List[str]) -> List[str]:
     return cleaned[:5]  # Limit to 5 genres
 
 
+def enrich_by_work(work_id: str, title: str, author: str) -> dict:
+    """
+    Fetch book data by Open Library work ID.
+    work_id can be full path (/works/OL123W) or just the ID (OL123W).
+    """
+    # Normalize: strip /works/ prefix if present
+    work_key = work_id.strip('/')
+    if not work_key.startswith('works/'):
+        work_key = f'works/{work_id}'
+
+    print(f"  Querying by work: {work_key} ({title})")
+
+    try:
+        response = requests.get(
+            f'https://openlibrary.org/{work_key}.json',
+            timeout=10
+        )
+        response.raise_for_status()
+        work_data = response.json()
+
+        # Get editions to find an ISBN and cover
+        editions_response = requests.get(
+            f'https://openlibrary.org/{work_key}/editions.json',
+            params={'limit': 5},
+            timeout=10
+        )
+        editions = editions_response.json().get('entries', [])
+
+        # Find best ISBN from editions
+        isbn = None
+        edition_key = None
+        for ed in editions:
+            edition_key = ed.get('key', '').split('/')[-1]
+            isbns = ed.get('isbn_13', []) + ed.get('isbn_10', [])
+            if isbns:
+                isbn = isbns[0]
+                break
+
+        # Extract metadata from work
+        official_title = work_data.get('title')
+        # Authors require separate fetch; fallback to user-provided
+
+        subjects = work_data.get('subjects', [])
+
+        # Parse first_publish_date to extract year
+        year_published = None
+        first_publish = work_data.get('first_publish_date')
+        if first_publish:
+            import re
+            match = re.search(r'\d{4}', str(first_publish))
+            if match:
+                year_published = int(match.group())
+
+        print(f"    ✓ Found by work: {official_title}")
+
+        return {
+            'official_title': official_title,
+            'official_author': None,  # Would need separate author fetch
+            'isbn': isbn,
+            'year_published': year_published,
+            'subjects': subjects[:10],
+            'open_library_work_key': f'/{work_key}',
+            'open_library_edition_key': edition_key,
+            'match_confidence': 'work_override',
+            'fetched_at': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
+        }
+
+    except requests.RequestException as e:
+        print(f"    ✗ Work API error: {e}")
+        return enrich_book(title, author)  # Fallback to search
+
+
 def enrich_by_isbn(isbn: str, title: str, author: str) -> dict:
     """
     Fetch book data directly by ISBN from Open Library.
@@ -304,10 +376,14 @@ def enrich_books(books: List[dict]) -> Dict[str, dict]:
 
         cache_key = make_cache_key(book['title'], book['author'])
 
-        # Use ISBN-based enrichment if isbn_override is provided
+        # Use override-based enrichment if provided, otherwise search by title/author
         isbn_override = book.get('isbn_override')
+        olid_work_override = book.get('olid_work_override')
+
         if isbn_override:
             results[cache_key] = enrich_by_isbn(isbn_override, book['title'], book['author'])
+        elif olid_work_override:
+            results[cache_key] = enrich_by_work(olid_work_override, book['title'], book['author'])
         else:
             results[cache_key] = enrich_book(book['title'], book['author'])
 

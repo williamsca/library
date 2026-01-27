@@ -65,6 +65,7 @@ def parse_csv(csv_content: str) -> List[Dict]:
             'title': title,
             'author': author,
             'isbn_override': row.get('isbn_override', '').strip() or None,
+            'olid_work_override': row.get('olid_work_override', '').strip() or None,
             'geo_region': row.get('geo_region', '').strip() or None,
             'sort_year': row.get('sort_year', '').strip() or None,
             'sort_basis': row.get('sort_basis', '').strip() or None,
@@ -221,16 +222,25 @@ def main():
         cache_key = make_cache_key(book['title'], book['author'])
         current_isbn_override = book.get('isbn_override')
 
+        current_olid_work_override = book.get('olid_work_override')
+
         # Need enrichment if:
         # 1. Not in cache at all, OR
-        # 2. isbn_override has changed
+        # 2. isbn_override has changed, OR
+        # 3. olid_work_override has changed
         if cache_key not in cache:
             to_enrich.append(book)
         else:
             cached_isbn_override = cache[cache_key].get('isbn_override_used')
+            cached_olid_work_override = cache[cache_key].get('olid_work_override_used')
+
             if current_isbn_override != cached_isbn_override:
                 print(f"  ↻ isbn_override changed for '{book['title']}': "
                       f"{cached_isbn_override or 'None'} → {current_isbn_override or 'None'}")
+                to_enrich.append(book)
+            elif current_olid_work_override != cached_olid_work_override:
+                print(f"  ↻ olid_work_override changed for '{book['title']}': "
+                      f"{cached_olid_work_override or 'None'} → {current_olid_work_override or 'None'}")
                 to_enrich.append(book)
 
     print(f"\nBooks needing enrichment: {len(to_enrich)}")
@@ -240,11 +250,12 @@ def main():
     if to_enrich:
         new_enrichments = enrich_books(to_enrich)
 
-        # Store isbn_override in cache for change detection
+        # Store overrides in cache for change detection
         for book in to_enrich:
             cache_key = make_cache_key(book['title'], book['author'])
             if cache_key in new_enrichments:
                 new_enrichments[cache_key]['isbn_override_used'] = book.get('isbn_override')
+                new_enrichments[cache_key]['olid_work_override_used'] = book.get('olid_work_override')
 
         cache.update(new_enrichments)
 
