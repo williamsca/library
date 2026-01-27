@@ -303,16 +303,21 @@
     "fetched_at": "2026-01-27T17:20:50.867620Z"
   },
   "the attributes of god vol. 1|a.w. tozer": {
-    "official_title": null,
-    "official_author": null,
-    "isbn": null,
-    "year_published": null,
-    "subjects": [],
+    "official_title": "The Attributes of God",
+    "official_author": "A. W. Tozer",
+    "isbn": "9781596444072",
+    "year_published": 2006,
+    "subjects": [
+      "God",
+      "Attributes",
+      "God (Christianity)"
+    ],
     "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:20:52.334915Z"
+    "open_library_edition_key": "OL8890833M",
+    "match_confidence": "isbn",
+    "fetched_at": "2026-01-27T22:03:57.308032Z",
+    "isbn_override_used": "9781596444072",
+    "olid_work_override_used": null
   },
   "the valley of vision|arthur bennett (editor)": {
     "official_title": null,
@@ -2438,16 +2443,21 @@
     "fetched_at": "2026-01-27T17:23:58.280240Z"
   },
   "order without design|alan bertaud": {
-    "official_title": null,
-    "official_author": null,
-    "isbn": null,
-    "year_published": null,
-    "subjects": [],
+    "official_title": "Order without Design",
+    "official_author": "Alain Bertaud",
+    "isbn": "9780262038768",
+    "year_published": 2018,
+    "subjects": [
+      "Urban economics",
+      "City planning",
+      "HISTORY / Social History"
+    ],
     "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:23:59.719485Z"
+    "open_library_edition_key": "OL27372175M",
+    "match_confidence": "isbn",
+    "fetched_at": "2026-01-27T22:03:58.754481Z",
+    "isbn_override_used": "9780262038768",
+    "olid_work_override_used": null
   },
   "the 99% invisible city|roman mars and kurt kohlstedt": {
     "official_title": null,
@@ -5290,16 +5300,28 @@
     "fetched_at": "2026-01-27T17:28:09.854359Z"
   },
   "aeschylus ii: the oresteia|aeschylus": {
-    "official_title": null,
-    "official_author": null,
-    "isbn": null,
-    "year_published": null,
-    "subjects": [],
+    "official_title": "The Complete Greek Tragedies",
+    "official_author": "Aeschylus",
+    "isbn": "9780226307947",
+    "year_published": 1992,
+    "subjects": [
+      "Drama",
+      "Translations into English",
+      "Seven against Thebes (Greek mythology)",
+      "History",
+      "Continental european drama (dramatic works by one author)",
+      "Translations into englishaeschylus",
+      "Prometheus (greek deity)",
+      "Prometheus (greek deity)--drama",
+      "Seven against thebes (greek mythology)--drama",
+      "Danaus (greek mythology)--drama"
+    ],
     "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:28:11.268767Z"
+    "open_library_edition_key": "OL9514000M",
+    "match_confidence": "isbn",
+    "fetched_at": "2026-01-27T22:04:00.088477Z",
+    "isbn_override_used": "9780226307947",
+    "olid_work_override_used": null
   },
   "the romans|mary boatwright et al.": {
     "official_title": null,
