@@ -190,7 +190,7 @@ def main():
     output_path = repo_root / 'data' / 'books.json'
 
     # 1. Fetch CSV
-    csv_url = os.environ.get('DROPBOX_URL')
+    csv_url = 'https://www.dropbox.com/scl/fi/nxlkl090aewe3qvebr3f7/library.csv?rlkey=jv1we3yba15l5uf4u9ikwhl5x&st=vhy8dgyi&dl=0'
     if csv_url:
         # Production: fetch from Dropbox
         csv_content = fetch_csv(csv_url)

@@ -3,45 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Williams Family Library</title>
+  <title>Catalogus Librorum Williams</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Williams Family Library</h1>
-    <p class="stats" id="stats">Loading...</p>
-  </header>
-
   <main>
-    <section class="controls">
+    <header>
+      <h1>Catalogus Librorum Williams</h1>
+      <div class="ornament">━━━━━━━━━━━━━━━━━━━━</div>
+    </header>
+
+    <div class="search-container">
       <input
         type="search"
         id="search"
-        placeholder="Search titles, authors, genres..."
         autofocus
       >
+    </div>
 
-      <div class="filters">
-        <select id="genre-filter">
-          <option value="">All genres</option>
-        </select>
-
-        <select id="sort">
-          <option value="title">Sort by title</option>
-          <option value="author">Sort by author</option>
-          <option value="year">Sort by year</option>
-        </select>
-      </div>
+    <section id="results" class="book-list">
+      <p class="loading">Loading...</p>
     </section>
 
-    <section id="results" class="book-grid">
-      <p class="loading">Loading books...</p>
-    </section>
+    <footer>
+      <span class="sigil">❧</span>
+    </footer>
   </main>
-
-  <footer>
-    <p>Built with <a href="https://openlibrary.org" target="_blank">Open Library</a></p>
-  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
   <script src="app.js"></script>
