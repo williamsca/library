@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-27T20:00:28.488270Z",
+  "generated_at": "2026-01-27T22:04:00.096616Z",
   "count": 323,
   "books": [
     {
@@ -123,22 +123,26 @@
     },
     {
       "id": "d2ca4658",
-      "title": "The Attributes of God Vol. 1",
-      "author": "A.W. Tozer",
+      "title": "The Attributes of God",
+      "author": "A. W. Tozer",
       "user_title": "The Attributes of God Vol. 1",
       "user_author": "A.W. Tozer",
-      "isbn": null,
-      "year_published": null,
-      "genres": [],
+      "isbn": "9781596444072",
+      "year_published": 2006,
+      "genres": [
+        "God",
+        "Attributes",
+        "God (Christianity)"
+      ],
       "geo_region": null,
       "sort_year": null,
       "sort_basis": null,
       "read_by_colin": false,
       "read_by_kaitlyn": false,
-      "cover_url": null,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9781596444072-M.jpg",
       "open_library_url": null,
-      "match_confidence": "none",
-      "search_text": "the attributes of god vol. 1 a.w. tozer"
+      "match_confidence": "isbn",
+      "search_text": "the attributes of god a. w. tozer god attributes god (christianity)"
     },
     {
       "id": "a31d2a73",
@@ -2992,21 +2996,25 @@
     {
       "id": "0b40c7ec",
       "title": "Order without Design",
-      "author": "Alan Bertaud",
+      "author": "Alain Bertaud",
       "user_title": "Order without Design",
       "user_author": "Alan Bertaud",
-      "isbn": null,
-      "year_published": null,
-      "genres": [],
+      "isbn": "9780262038768",
+      "year_published": 2018,
+      "genres": [
+        "Urban Economics",
+        "City Planning",
+        "History / Social History"
+      ],
       "geo_region": null,
       "sort_year": null,
       "sort_basis": null,
       "read_by_colin": false,
       "read_by_kaitlyn": false,
-      "cover_url": null,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9780262038768-M.jpg",
       "open_library_url": null,
-      "match_confidence": "none",
-      "search_text": "order without design alan bertaud"
+      "match_confidence": "isbn",
+      "search_text": "order without design alain bertaud urban economics city planning history / social history"
     },
     {
       "id": "5dce6a97",
@@ -6899,22 +6907,28 @@
     },
     {
       "id": "c73248bf",
-      "title": "Aeschylus II: The Oresteia",
+      "title": "The Complete Greek Tragedies",
       "author": "Aeschylus",
       "user_title": "Aeschylus II: The Oresteia",
       "user_author": "Aeschylus",
-      "isbn": null,
-      "year_published": null,
-      "genres": [],
+      "isbn": "9780226307947",
+      "year_published": 1992,
+      "genres": [
+        "Drama",
+        "Translations Into English",
+        "Seven Against Thebes (Greek Mythology)",
+        "History",
+        "Translations Into Englishaeschylus"
+      ],
       "geo_region": null,
       "sort_year": null,
       "sort_basis": null,
       "read_by_colin": false,
       "read_by_kaitlyn": false,
-      "cover_url": null,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9780226307947-M.jpg",
       "open_library_url": null,
-      "match_confidence": "none",
-      "search_text": "aeschylus ii: the oresteia aeschylus"
+      "match_confidence": "isbn",
+      "search_text": "the complete greek tragedies aeschylus drama translations into english seven against thebes (greek mythology) history translations into englishaeschylus"
     },
     {
       "id": "2599ccdd",
