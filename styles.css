@@ -1,0 +1,162 @@
+:root {
+  --paper-bg: #f4f1ea;
+  --ink-black: #2c2416;
+  --accent: #5c1a1a;
+  --rule-color: #d4cfc0;
+  --max-width: 800px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'EB Garamond', 'Garamond', serif;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink-black);
+  background: var(--paper-bg);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 3rem 2rem;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+header h1 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-variant: small-caps;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+  color: var(--ink-black);
+}
+
+.ornament {
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: var(--rule-color);
+  margin: 0;
+}
+
+.search-container {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#search {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem 0.75rem;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 0.95rem;
+  color: var(--ink-black);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--rule-color);
+  outline: none;
+  text-align: center;
+}
+
+#search:focus {
+  border-bottom-color: var(--accent);
+}
+
+.book-list {
+  margin: 0;
+}
+
+.book-entry {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--rule-color);
+}
+
+.book-entry:last-child {
+  border-bottom: none;
+}
+
+.book-author {
+  margin: 0 0 0.25rem;
+  font-size: 0.85rem;
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  font-weight: 500;
+}
+
+.book-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.book-title a {
+  color: var(--ink-black);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+}
+
+.book-title a:hover {
+  text-decoration-color: var(--accent);
+}
+
+.book-meta {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #5a5244;
+  letter-spacing: 0.03em;
+}
+
+.book-meta .separator {
+  margin: 0 0.5em;
+}
+
+.loading,
+.no-results {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #6a6254;
+}
+
+footer {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  margin-top: 2rem;
+}
+
+.sigil {
+  font-size: 1.2rem;
+  color: var(--rule-color);
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+
+  header h1 {
+    font-size: 1rem;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  #search {
+    max-width: 100%;
+  }
+}
