@@ -89,9 +89,10 @@ function createBookEntry(book) {
     ? `<p class="book-meta">${metaParts.join('<span class="separator">·</span>')}</p>`
     : '';
 
+  const titleText = toTitleCase(book.title);
   const titleContent = book.open_library_url
-    ? `<a href="${book.open_library_url}" target="_blank" rel="noopener">${escapeHtml(book.title)}</a>`
-    : escapeHtml(book.title);
+    ? `<a href="${book.open_library_url}" target="_blank" rel="noopener">${escapeHtml(titleText)}</a>`
+    : escapeHtml(titleText);
 
   return `
     <div class="book-entry">
@@ -107,6 +108,24 @@ function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
+}
+
+// Convert text to title case
+function toTitleCase(text) {
+  const smallWords = new Set([
+    'a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'in', 'nor',
+    'of', 'on', 'or', 'so', 'the', 'to', 'up', 'yet', 'via'
+  ]);
+
+  return text.split(' ').map((word, index) => {
+    if (!word) return word;
+    const lower = word.toLowerCase();
+    // Always capitalize first word, otherwise check if it's a small word
+    if (index === 0 || !smallWords.has(lower)) {
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    }
+    return lower;
+  }).join(' ');
 }
 
 // Start the app when DOM is ready
