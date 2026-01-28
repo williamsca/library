@@ -66,20 +66,28 @@
     "fetched_at": "2026-01-27T15:45:25.578311Z"
   },
   "1984|george orwell": {
-    "official_title": "1984",
-    "official_author": "George Orwell, Fido Nesti",
-    "isbn": "9780358359951",
-    "year_published": 1984,
+    "official_title": "Nineteen Eighty-Four",
+    "official_author": null,
+    "isbn": "9781976304699",
+    "year_published": null,
     "subjects": [
-      "Totalitarianism",
-      "Comic books, strips",
-      "Dystopias",
-      "Fiction"
+      "futurology",
+      "censorship",
+      "surveillance",
+      "rebels",
+      "sting operations",
+      "historical negationism",
+      "memory holes",
+      "thoughtcrime",
+      "Outer Party",
+      "resistance movements"
     ],
-    "open_library_work_key": "/works/OL23745689W",
-    "open_library_edition_key": "OL34674070M",
-    "match_confidence": "medium",
-    "fetched_at": "2026-01-27T15:45:27.039234Z"
+    "open_library_work_key": "/works/OL1168083W",
+    "open_library_edition_key": "OL55257669M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:02.972759Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL1168083W"
   },
   "the road|cormac mccarthy": {
     "official_title": "The Road",
@@ -320,40 +328,71 @@
     "olid_work_override_used": null
   },
   "the valley of vision|arthur bennett (editor)": {
-    "official_title": null,
+    "official_title": "The Valley of vision",
     "official_author": null,
-    "isbn": null,
+    "isbn": "0851512283",
     "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:20:53.767580Z"
+    "subjects": [
+      "Prayers",
+      "Prayer-books and devotions",
+      "Puritans",
+      "English",
+      "Prayers and devotions"
+    ],
+    "open_library_work_key": "/works/OL19018506W",
+    "open_library_edition_key": "OL4934980M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:31.810059Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL19018506W"
   },
   "the heavenly man|brother yun with paul hattaway": {
-    "official_title": null,
+    "official_title": "The heavenly man",
     "official_author": null,
-    "isbn": null,
-    "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:20:55.259784Z"
+    "isbn": "185424597X",
+    "year_published": 2002,
+    "subjects": [
+      "Brothers (Religious)",
+      "Biography",
+      "Church history",
+      "Persecution",
+      "Christian biography",
+      "Christianity",
+      "Christenverfolgung",
+      "Clergy",
+      "BIOGRAPHY & AUTOBIOGRAPHY",
+      "Religious"
+    ],
+    "open_library_work_key": "/works/OL12726320W",
+    "open_library_edition_key": "OL22035675M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:33.109284Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL12726320W"
   },
   "1177 b.c.: the year civilization collapsed|eric h. cline": {
-    "official_title": null,
-    "official_author": null,
-    "isbn": null,
-    "year_published": null,
-    "subjects": [],
+    "official_title": "1177 B.C.",
+    "official_author": "Eric H. Cline",
+    "isbn": "9780691208015",
+    "year_published": 2021,
+    "subjects": [
+      "Bronze age",
+      "Mediterranean region, history",
+      "Civilization",
+      "Sea Peoples",
+      "History",
+      "Mediterranean Region",
+      "HISTORY / Ancient / General",
+      "SOCIAL SCIENCE / Archaeology",
+      "HISTORY / Civilization",
+      "Hochkultur"
+    ],
     "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:20:56.760623Z"
+    "open_library_edition_key": "OL32833395M",
+    "match_confidence": "isbn",
+    "fetched_at": "2026-01-28T00:42:34.377678Z",
+    "isbn_override_used": "9780691208015",
+    "olid_work_override_used": null
   },
   "the history of economic thought: a reader, second edition|steven g. medema and warren j. samuels (editors)": {
     "official_title": null,
@@ -391,16 +430,28 @@
     "fetched_at": "2026-01-27T17:21:01.244466Z"
   },
   "cornelius nepos (loeb classical library)|cornelius nepos": {
-    "official_title": null,
+    "official_title": "Vitae excellentium imperatorum",
     "official_author": null,
     "isbn": null,
-    "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:21:02.674935Z"
+    "year_published": 1594,
+    "subjects": [
+      "Biography",
+      "Classical biography",
+      "Early works to 1800",
+      "Emperors",
+      "Generals",
+      "History",
+      "Latin language",
+      "Readers",
+      "Bibliography",
+      "Latin language materials"
+    ],
+    "open_library_work_key": "/works/OL3069840W",
+    "open_library_edition_key": "OL15118311M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:35.892387Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL3069840W"
   },
   "republic|plato (trans. c.d.c. reeve)": {
     "official_title": null,
@@ -415,28 +466,33 @@
     "fetched_at": "2026-01-27T17:21:04.078827Z"
   },
   "microeconomic theory|mas-colell, whinston, and green": {
-    "official_title": null,
+    "official_title": "Microeconomic theory",
     "official_author": null,
-    "isbn": null,
-    "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:21:05.507542Z"
+    "isbn": "0195073401",
+    "year_published": 1995,
+    "subjects": [
+      "Microeconomics",
+      "open_syllabus_project"
+    ],
+    "open_library_work_key": "/works/OL2921497W",
+    "open_library_edition_key": "OL785910M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:37.160445Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL2921497W"
   },
   "chicago price theory|jaffe, minton, mulligan, and murphy": {
-    "official_title": null,
+    "official_title": "Chicago Price Theory",
     "official_author": null,
-    "isbn": null,
+    "isbn": "9780691198811",
     "year_published": null,
     "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:21:07.007384Z"
+    "open_library_work_key": "/works/OL21212458W",
+    "open_library_edition_key": "OL29812885M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:38.431281Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL21212458W"
   },
   "big ideas in macroeconomics|athreya": {
     "official_title": "Big Ideas in Macroeconomics",
@@ -511,28 +567,45 @@
     "fetched_at": "2026-01-27T17:21:12.846472Z"
   },
   "principles of macroeconomics|lee coppock and dirk mateer": {
-    "official_title": null,
+    "official_title": "Principles of Macroeconomics",
     "official_author": null,
-    "isbn": null,
+    "isbn": "9781324034063",
     "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:21:14.251716Z"
+    "subjects": [
+      "Macroeconomics",
+      "Textbooks",
+      "Economics"
+    ],
+    "open_library_work_key": "/works/OL21062556W",
+    "open_library_edition_key": "OL46120664M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:39.707001Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL21062556W"
   },
   "recursive macroeconomic theory|ljungqvist and sargent": {
-    "official_title": null,
+    "official_title": "Recursive macroeconomic theory",
     "official_author": null,
-    "isbn": null,
-    "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:21:15.650467Z"
+    "isbn": "9780262278447",
+    "year_published": 2000,
+    "subjects": [
+      "Macroeconomics",
+      "Recursive functions",
+      "Statics and dynamics (Social sciences)",
+      "open_syllabus_project",
+      "Doctrines economiques",
+      "Fonctions recursives",
+      "Recursieve functies",
+      "Macro-economie",
+      "Economics",
+      "Statique et dynamique (Sciences sociales)"
+    ],
+    "open_library_work_key": "/works/OL222103W",
+    "open_library_edition_key": "OL53287264M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:41.017292Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL222103W"
   },
   "theory of value|debreu": {
     "official_title": "Theory of value",
@@ -552,16 +625,17 @@
     "fetched_at": "2026-01-27T17:21:17.059883Z"
   },
   "the upside-down world|benjamin moser": {
-    "official_title": null,
+    "official_title": "Upside-Down World",
     "official_author": null,
-    "isbn": null,
+    "isbn": "9781802060829",
     "year_published": null,
     "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:21:18.475186Z"
+    "open_library_work_key": "/works/OL34470452W",
+    "open_library_edition_key": "OL51059467M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:42.454690Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL34470452W"
   },
   "dynamic macroeconomic theory|sargent": {
     "official_title": "Dynamic macroeconomic theory",
@@ -674,28 +748,42 @@
     "fetched_at": "2026-01-27T17:21:29.930077Z"
   },
   "mostly harmless econometrics|angrist and pischke": {
-    "official_title": null,
+    "official_title": "Mostly harmless econometrics",
     "official_author": null,
     "isbn": null,
     "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
+    "subjects": [
+      "Econometrics",
+      "Regression analysis"
+    ],
+    "open_library_work_key": "/works/OL16973090M",
     "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:21:31.383176Z"
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:44.947687Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL16973090M"
   },
   "the spatial economy|fujita krugman and venables": {
-    "official_title": null,
-    "official_author": null,
-    "isbn": null,
-    "year_published": null,
-    "subjects": [],
+    "official_title": "The Spatial Economy",
+    "official_author": "Masahisa Fujita, Paul R. Krugman, Anthony J. Venables",
+    "isbn": "9780262561471",
+    "year_published": 2001,
+    "subjects": [
+      "Economics",
+      "International trade",
+      "Economic geography",
+      "Space in economics",
+      "Urban economics",
+      "Regional economics",
+      "Hf1025 .f973 1999",
+      "330.9"
+    ],
     "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:21:32.802238Z"
+    "open_library_edition_key": "OL9861443M",
+    "match_confidence": "isbn",
+    "fetched_at": "2026-01-28T00:42:46.196427Z",
+    "isbn_override_used": "9780262561471",
+    "olid_work_override_used": null
   },
   "web scraping with python|mitchell": {
     "official_title": "Web Scraping with Python",
@@ -761,28 +849,39 @@
     "fetched_at": "2026-01-27T17:21:37.065037Z"
   },
   "game theory alive|karlin and peres": {
-    "official_title": null,
-    "official_author": null,
-    "isbn": null,
-    "year_published": null,
-    "subjects": [],
+    "official_title": "Game Theory, Alive",
+    "official_author": "Anna R. Karlin, Yuval Peres",
+    "isbn": "9781470419820",
+    "year_published": 2017,
+    "subjects": [
+      "Game theory"
+    ],
     "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:21:38.463229Z"
+    "open_library_edition_key": "OL37268038M",
+    "match_confidence": "isbn",
+    "fetched_at": "2026-01-28T00:42:47.447459Z",
+    "isbn_override_used": "9781470419820",
+    "olid_work_override_used": null
   },
   "statistical inference|casella and berger": {
-    "official_title": null,
-    "official_author": null,
-    "isbn": null,
-    "year_published": null,
-    "subjects": [],
+    "official_title": "Statistical Inference",
+    "official_author": "George Casella",
+    "isbn": "9788131503942",
+    "year_published": 2006,
+    "subjects": [
+      "Mathematical statistics",
+      "Probabilities",
+      "open_syllabus_project",
+      "Probability",
+      "Mathematics",
+      "Statistics"
+    ],
     "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:21:39.888648Z"
+    "open_library_edition_key": "OL33090380M",
+    "match_confidence": "isbn",
+    "fetched_at": "2026-01-28T00:42:48.706479Z",
+    "isbn_override_used": "9788131503942",
+    "olid_work_override_used": null
   },
   "econometrics|fumio hayashi": {
     "official_title": "Econometrics",
@@ -800,16 +899,22 @@
     "fetched_at": "2026-01-27T17:21:41.352039Z"
   },
   "even a geek and speak|asher": {
-    "official_title": null,
+    "official_title": "Even a Geek Can Speak",
     "official_author": null,
-    "isbn": null,
+    "isbn": "9780978577605",
     "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:21:42.769952Z"
+    "subjects": [
+      "Business presentations",
+      "Business communication",
+      "Communication in management",
+      "Interpersonal communication"
+    ],
+    "open_library_work_key": "/works/OL5818562W",
+    "open_library_edition_key": "OL28417695M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:49.993646Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL5818562W"
   },
   "better presentations|schwabish": {
     "official_title": "Better Presentations",
@@ -1237,40 +1342,71 @@
     "fetched_at": "2026-01-27T17:22:20.250069Z"
   },
   "crooked plow|itamar vieira": {
-    "official_title": null,
+    "official_title": "Torto Arado",
     "official_author": null,
-    "isbn": null,
+    "isbn": "9781839766404",
     "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:22:21.679384Z"
+    "subjects": [
+      "Magic realism (Literature)",
+      "Accidents",
+      "Domestic fiction",
+      "Families",
+      "farmers",
+      "fiction",
+      "novels",
+      "sisters"
+    ],
+    "open_library_work_key": "/works/OL24141556W",
+    "open_library_edition_key": "OL40142897M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:51.258603Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL24141556W"
   },
   "my friend|fredrik backman": {
-    "official_title": null,
+    "official_title": "Mina v\u00e4nner",
     "official_author": null,
-    "isbn": null,
+    "isbn": "9781982121655",
     "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:22:23.109118Z"
+    "subjects": [
+      "Fiction",
+      "Contemporary",
+      "Literary Fiction",
+      "Adult",
+      "Coming Of Age",
+      "Friendship",
+      "Adult Fiction"
+    ],
+    "open_library_work_key": "/works/OL42407794W",
+    "open_library_edition_key": "OL59326117M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:52.529984Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL42407794W"
   },
   "americana|chimamanda ngozi adichie": {
-    "official_title": null,
+    "official_title": "Americanah",
     "official_author": null,
-    "isbn": null,
+    "isbn": "9781101873007",
     "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:22:24.542150Z"
+    "subjects": [
+      "Nigerians",
+      "Immigrants",
+      "Refugees",
+      "African-Americans",
+      "literary fiction",
+      "African-American fiction",
+      "cultural heritage",
+      "Fiction",
+      "blogging",
+      "romance"
+    ],
+    "open_library_work_key": "/works/OL16805415W",
+    "open_library_edition_key": "OL50564124M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:53.776331Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL16805415W"
   },
   "in the time of the butterflies|julia alvarez": {
     "official_title": "In the Time of the Butterflies",
@@ -1347,7 +1483,9 @@
     "open_library_work_key": "/works/OL24499152W",
     "open_library_edition_key": "OL32462887M",
     "match_confidence": "high",
-    "fetched_at": "2026-01-27T17:22:30.463045Z"
+    "fetched_at": "2026-01-28T00:42:55.380009Z",
+    "isbn_override_used": "679731377",
+    "olid_work_override_used": null
   },
   "flaubert's parrot|julian barnes": {
     "official_title": "Flaubert's Parrot",
@@ -1372,26 +1510,28 @@
     "fetched_at": "2026-01-27T17:22:31.894406Z"
   },
   "the sisterhood of the traveling pants|ann brashares": {
-    "official_title": "The Second Summer of the Sisterhood (Sisterhood of the Traveling Pants Series, Book 2)",
-    "official_author": "Ann Brashares",
-    "isbn": "9780385908528",
-    "year_published": 2003,
+    "official_title": "The Sisterhood of the Traveling Pants (Sisterhood of the Traveling Pants Series, Book 1)",
+    "official_author": null,
+    "isbn": "0553494791",
+    "year_published": null,
     "subjects": [
-      "Young adult fiction",
-      "Conduct of life",
-      "Juvenile fiction",
-      "Fiction",
-      "Female friendship",
       "Best friends",
-      "Jeans (Clothing)",
+      "Conduct of life",
+      "Fiction",
       "Friendship",
+      "Jeans (Clothing)",
+      "Juvenile fiction",
       "Pants",
-      "Summer"
+      "Summer",
+      "Swearing",
+      "Teenage girls"
     ],
-    "open_library_work_key": "/works/OL5713778W",
-    "open_library_edition_key": "OL3686381M",
-    "match_confidence": "medium",
-    "fetched_at": "2026-01-27T17:22:33.377411Z"
+    "open_library_work_key": "/works/OL5713781W",
+    "open_library_edition_key": "OL23245908M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:56.646212Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL5713781W"
   },
   "the second summer of the sisterhood|ann brashares": {
     "official_title": "Second Summer of the Sisterhood",
@@ -1576,16 +1716,25 @@
     "fetched_at": "2026-01-27T17:22:47.810538Z"
   },
   "the spoken word revolution|eleveld and smith": {
-    "official_title": null,
+    "official_title": "The spoken word revolution",
     "official_author": null,
     "isbn": null,
     "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
+    "subjects": [
+      "Sound poetry",
+      "American poetry",
+      "Oral interpretation of poetry",
+      "Performance art",
+      "Poetry",
+      "Hip-hop",
+      "Spoken word poetry"
+    ],
+    "open_library_work_key": "/works/OL19922809W",
     "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:22:49.297160Z"
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:57.896859Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL19922809W"
   },
   "learning to look|joshua c. taylor": {
     "official_title": "LEARNING TO LOOK",
@@ -1986,15 +2135,17 @@
     "fetched_at": "2026-01-27T17:23:22.246073Z"
   },
   "the whisperer in darkness|h.p. lovecraft": {
-    "official_title": "THE WHISPERER IN DARKNESS",
-    "official_author": "H.P. Lovecraft",
-    "isbn": "9781077640481",
-    "year_published": 2019,
+    "official_title": "Whisperer in Darkness",
+    "official_author": null,
+    "isbn": null,
+    "year_published": null,
     "subjects": [],
-    "open_library_work_key": "/works/OL24380980W",
-    "open_library_edition_key": "OL32287098M",
-    "match_confidence": "high",
-    "fetched_at": "2026-01-27T17:23:23.769635Z"
+    "open_library_work_key": "/works/OL36978647M",
+    "open_library_edition_key": null,
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:59.144822Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL36978647M"
   },
   "poirot investigates|agatha christie": {
     "official_title": "Poirot investigates",
@@ -2195,16 +2346,28 @@
     "fetched_at": "2026-01-27T17:23:36.703363Z"
   },
   "ghostwriten|david mitchell": {
-    "official_title": null,
+    "official_title": "Ghostwritten",
     "official_author": null,
-    "isbn": null,
-    "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:23:38.089139Z"
+    "isbn": "9781844568833",
+    "year_published": 2000,
+    "subjects": [
+      "Publishers' bindings (Bindings)",
+      "Connectionism",
+      "Interpersonal relations",
+      "Transcendence (Philosophy)",
+      "Cognition and culture",
+      "International relations",
+      "Fiction",
+      "Strangers",
+      "Causation",
+      "Life change events"
+    ],
+    "open_library_work_key": "/works/OL271981W",
+    "open_library_edition_key": "OL53244711M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:00.426412Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL271981W"
   },
   "the brothers karamazov|fyodor dostoevsky": {
     "official_title": "The Brothers Karamazov",
@@ -2619,16 +2782,22 @@
     "fetched_at": "2026-01-27T17:24:13.974423Z"
   },
   "radical markets|eric a. posner and e. glen weyl": {
-    "official_title": null,
+    "official_title": "Radical Markets",
     "official_author": null,
-    "isbn": null,
+    "isbn": "978-0691177502",
     "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:24:15.419221Z"
+    "subjects": [
+      "Radicalism",
+      "Economics",
+      "Libertarianism",
+      "Markets"
+    ],
+    "open_library_work_key": "/works/OL21212523W",
+    "open_library_edition_key": "OL37859767M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:01.665014Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL21212523W"
   },
   "reinventing the bazaar|john mcmillan": {
     "official_title": "Reinventing the Bazaar",
@@ -3219,16 +3388,28 @@
     "fetched_at": "2026-01-27T17:24:58.412111Z"
   },
   "the guernsey literary and potato peel pie society|mary ann shaffer and annie barrows": {
-    "official_title": null,
+    "official_title": "The Guernsey Literary and Potato Peel Pie Society",
     "official_author": null,
-    "isbn": null,
+    "isbn": "9780747598800",
     "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:24:59.909278Z"
+    "subjects": [
+      "New York Times bestseller",
+      "nyt:trade_fiction_paperback=2010-07-11",
+      "Literature",
+      "Epistolary fiction",
+      "Fiction",
+      "Women authors",
+      "Book clubs (Discussion groups)",
+      "History",
+      "London (england), fiction",
+      "Authors, fiction"
+    ],
+    "open_library_work_key": "/works/OL9334371W",
+    "open_library_edition_key": "OL23419624M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:04.246748Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL9334371W"
   },
   "catch-22|joseph heller": {
     "official_title": "Catch-22",
@@ -3297,16 +3478,20 @@
     "fetched_at": "2026-01-27T17:25:04.400624Z"
   },
   "sweden's road to modernity|lennert schon": {
-    "official_title": null,
-    "official_author": null,
-    "isbn": null,
-    "year_published": null,
-    "subjects": [],
+    "official_title": "Sweden's road to modernity",
+    "official_author": "Lennart Sch\u00f6n",
+    "isbn": "9789186203429",
+    "year_published": 2010,
+    "subjects": [
+      "Economic conditions",
+      "Economic development"
+    ],
     "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:25:05.806024Z"
+    "open_library_edition_key": "OL25232484M",
+    "match_confidence": "isbn",
+    "fetched_at": "2026-01-28T00:43:05.475926Z",
+    "isbn_override_used": "9789186203429",
+    "olid_work_override_used": null
   },
   "murder in amsterdam|ian buruma": {
     "official_title": "Murder in Amsterdam",
@@ -4139,28 +4324,32 @@
     "fetched_at": "2026-01-27T17:26:21.501010Z"
   },
   "the audubon society field guide to north american birds: eastern region|bull and farrand, jr.": {
-    "official_title": null,
+    "official_title": "National Audubon Society Field Guide to North American Birds",
     "official_author": null,
-    "isbn": null,
+    "isbn": "9780679428527",
     "year_published": null,
     "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:26:23.019837Z"
+    "open_library_work_key": "/works/OL8035454W",
+    "open_library_edition_key": "OL7698853M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:06.748684Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL8035454W"
   },
   "national geographic field guide to the birds of north america|dunn and aldefer": {
-    "official_title": null,
+    "official_title": "National Geographic field guide to the birds of North America",
     "official_author": null,
     "isbn": null,
     "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
+    "subjects": [
+      "Birds -- North America -- Identification"
+    ],
+    "open_library_work_key": "/works/OL17212355M",
     "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:26:24.433768Z"
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:08.006398Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL17212355M"
   },
   "robert frost's poems|robert frost": {
     "official_title": "Robert Frost's poems",
@@ -4264,16 +4453,20 @@
     "fetched_at": "2026-01-27T17:26:31.603217Z"
   },
   "gotham: a history of new york city to 1898|edwin g. burrows and mike wallace": {
-    "official_title": null,
-    "official_author": null,
-    "isbn": null,
-    "year_published": null,
-    "subjects": [],
+    "official_title": "Gotham",
+    "official_author": "Edwin G. Burrows, Mike Wallace",
+    "isbn": "9781280470172",
+    "year_published": 1998,
+    "subjects": [
+      "New york (n.y.), history",
+      "History"
+    ],
     "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:26:33.132612Z"
+    "open_library_edition_key": "OL40394106M",
+    "match_confidence": "isbn",
+    "fetched_at": "2026-01-28T00:43:09.249415Z",
+    "isbn_override_used": "9781280470172",
+    "olid_work_override_used": null
   },
   "the autobiography of malcolm x|malcolm x": {
     "official_title": "The Autobiography of Malcolm X",
@@ -4354,16 +4547,28 @@
     "fetched_at": "2026-01-27T17:26:40.462526Z"
   },
   "the pacificus-helvidius debates|alexander hamilton and james madison": {
-    "official_title": null,
+    "official_title": "The Pacificus-Helvidius Debates of 1793-1794",
     "official_author": null,
     "isbn": null,
     "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
+    "subjects": [
+      "Political science & theory",
+      "USA",
+      "Government - General",
+      "Political Process - General",
+      "United States - Revolutionary War",
+      "History",
+      "1789-1797",
+      "Constitutional history",
+      "Foreign relations",
+      "Politics and government"
+    ],
+    "open_library_work_key": "/works/OL11053443M",
     "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:26:41.877929Z"
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:10.497695Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL11053443M"
   },
   "question 7|richard flanagan": {
     "official_title": "Question 7",
@@ -4457,61 +4662,124 @@
     "fetched_at": "2026-01-27T17:26:52.067306Z"
   },
   "the charterhouse of parma|stendhal": {
-    "official_title": "The Charterhouse of Parma",
-    "official_author": "John). STENDHAL (Marie-Henri Beyle) (BERRYMAN",
-    "isbn": null,
-    "year_published": 1944,
-    "subjects": [],
-    "open_library_work_key": "/works/OL33927903W",
-    "open_library_edition_key": "OL45915592M",
-    "match_confidence": "medium",
-    "fetched_at": "2026-01-27T17:26:53.517220Z"
+    "official_title": "La chartreuse de Parme",
+    "official_author": null,
+    "isbn": "9781726496773",
+    "year_published": 1953,
+    "subjects": [
+      "Young men",
+      "Fiction",
+      "Social life and customs",
+      "Italy, fiction",
+      "Fiction, general",
+      "Manners and customs",
+      "French fiction",
+      "Stendhal (Henri Beyle, dit). Textes",
+      "Young men in fiction",
+      "Italy in fiction"
+    ],
+    "open_library_work_key": "/works/OL733285W",
+    "open_library_edition_key": "OL56827479M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:11.812938Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL733285W"
   },
   "the anomaly|herv\u00e9 le tellier": {
-    "official_title": null,
+    "official_title": "L'anomalie",
     "official_author": null,
-    "isbn": null,
+    "isbn": "9789584294777",
     "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:26:54.932487Z"
+    "subjects": [
+      "Fiction",
+      "Vol",
+      "Roman",
+      "Fiction, general",
+      "nyt:trade-fiction-paperback=2021-12-19",
+      "New York Times bestseller",
+      "Transatlantic flights",
+      "Doppelg\u00e4ngers",
+      "Plurality of worlds",
+      "Computer simulation"
+    ],
+    "open_library_work_key": "/works/OL24210931W",
+    "open_library_edition_key": "OL47105598M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:13.084248Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL24210931W"
   },
   "the meursault investigation|kamel daoud": {
-    "official_title": null,
-    "official_author": null,
-    "isbn": null,
-    "year_published": null,
-    "subjects": [],
+    "official_title": "The Meursault investigation",
+    "official_author": "Kamel Daoud",
+    "isbn": "9781590517512",
+    "year_published": 2015,
+    "subjects": [
+      "Arabs",
+      "Fiction",
+      "Algeria, fiction",
+      "Fiction, psychological",
+      "Fiction, political",
+      "LITERARY COLLECTIONS / Middle Eastern",
+      "FICTION / Literary",
+      "Psychological",
+      "Political",
+      "Etranger (Camus, Albert)"
+    ],
     "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:26:56.331144Z"
+    "open_library_edition_key": "OL27185477M",
+    "match_confidence": "isbn",
+    "fetched_at": "2026-01-28T00:43:14.341844Z",
+    "isbn_override_used": "9781590517512",
+    "olid_work_override_used": null
   },
   "the stranger|albert camus": {
-    "official_title": "The Stranger, The Plague (Coles Notes)",
-    "official_author": "Albert Camus",
-    "isbn": null,
-    "year_published": 1980,
-    "subjects": [],
-    "open_library_work_key": "/works/OL31270346W",
-    "open_library_edition_key": "OL42925218M",
-    "match_confidence": "low",
-    "fetched_at": "2026-01-27T17:26:57.737830Z"
+    "official_title": "L\u2019\u00e9tranger",
+    "official_author": null,
+    "isbn": "9787559352392",
+    "year_published": 1998,
+    "subjects": [
+      "Philosophical Novels",
+      "Murder",
+      "Fiction",
+      "Medicine in Literature",
+      "French",
+      "Novelas francesas",
+      "Asesinato",
+      "Ficci\u00f3n",
+      "Relatos de aventuras",
+      "Critique et interpr\u00e9tation"
+    ],
+    "open_library_work_key": "/works/OL1230613W",
+    "open_library_edition_key": "OL60952783M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:15.617206Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL1230613W"
   },
   "the plague|albert camus": {
-    "official_title": "The Stranger, The Plague (Coles Notes)",
-    "official_author": "Albert Camus",
-    "isbn": null,
-    "year_published": 1980,
-    "subjects": [],
-    "open_library_work_key": "/works/OL31270346W",
-    "open_library_edition_key": "OL42925218M",
-    "match_confidence": "low",
-    "fetched_at": "2026-01-27T17:26:59.143563Z"
+    "official_title": "La Peste",
+    "official_author": null,
+    "isbn": "8435015068",
+    "year_published": 1948,
+    "subjects": [
+      "Fiction",
+      "Plague",
+      "Plague in literature",
+      "Epidemics",
+      "Peste bub\u00f3nica",
+      "FICTION / Classics",
+      "FICTION / Psychological",
+      "FICTION / Literary",
+      "Continental european fiction (fictional works by one author)",
+      "Medicine in Literature"
+    ],
+    "open_library_work_key": "/works/OL1230715W",
+    "open_library_edition_key": "OL59886871M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:16.946933Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL1230715W"
   },
   "love in the time of cholera|gabriel garc\u00eda m\u00e1rquez": {
     "official_title": "Love in the Time of Cholera",
@@ -4825,15 +5093,28 @@
     "fetched_at": "2026-01-27T17:27:26.461571Z"
   },
   "frankenstein|mary shelley": {
-    "official_title": "Frankenstein",
-    "official_author": "Mary Shelley",
-    "isbn": "9798561287268",
-    "year_published": 2017,
-    "subjects": [],
-    "open_library_work_key": "/works/OL26860869W",
-    "open_library_edition_key": "OL42679246M",
-    "match_confidence": "high",
-    "fetched_at": "2026-01-27T17:27:28.186944Z"
+    "official_title": "Frankenstein or The Modern Prometheus",
+    "official_author": null,
+    "isbn": "9781774530511",
+    "year_published": 2006,
+    "subjects": [
+      "Frankenstein (Fictitious character)",
+      "Frankenstein's monster (Fictitious character)",
+      "Fiction",
+      "Victor Frankenstein (Fictitious character)",
+      "Scientists",
+      "Monsters",
+      "Fiction, horror",
+      "Frankenstein (fictitious character), fiction",
+      "Physicians, fiction",
+      "British fiction (fictional works by one author)"
+    ],
+    "open_library_work_key": "/works/OL450063W",
+    "open_library_edition_key": "OL60739655M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:18.185346Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL450063W"
   },
   "pygmalion|george bernard shaw": {
     "official_title": "Pygmalion",
@@ -5012,16 +5293,28 @@
     "fetched_at": "2026-01-27T17:27:43.187405Z"
   },
   "orthodoxy|g.k. chesterton": {
-    "official_title": null,
+    "official_title": "Orthodoxy",
     "official_author": null,
-    "isbn": null,
+    "isbn": "9781500923815",
     "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:27:44.644649Z"
+    "subjects": [
+      "Apologetics",
+      "Christianity",
+      "History",
+      "Essence, genius, nature",
+      "Evidence",
+      "Nonfiction",
+      "Religion & Spirituality",
+      "Essays",
+      "Christendom",
+      "Christianisme"
+    ],
+    "open_library_work_key": "/works/OL76350W",
+    "open_library_edition_key": "OL54816398M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:21.207775Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL76350W"
   },
   "exclusion and embrace|miroslav volf": {
     "official_title": "Exclusion and embrace",
@@ -5324,16 +5617,28 @@
     "olid_work_override_used": null
   },
   "the romans|mary boatwright et al.": {
-    "official_title": null,
+    "official_title": "The Romans, from village to empire",
     "official_author": null,
-    "isbn": null,
+    "isbn": "0195118758",
     "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:28:12.698519Z"
+    "subjects": [
+      "History",
+      "Rome -- History",
+      "Rome, history",
+      "History, ancient",
+      "History, ancient--rome",
+      "Roman world--history",
+      "Dg209 .b58 2004",
+      "Dg 209 b58 2004",
+      "Ancient History",
+      "Roman World"
+    ],
+    "open_library_work_key": "/works/OL475908W",
+    "open_library_edition_key": "OL3687942M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:22.658209Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL475908W"
   },
   "classical art|mary beard and john henderson": {
     "official_title": null,
@@ -5362,16 +5667,28 @@
     "fetched_at": "2026-01-27T17:28:15.704657Z"
   },
   "the rise of rome, books 1-5|livy": {
-    "official_title": null,
+    "official_title": "Ab urbe condita",
     "official_author": null,
-    "isbn": null,
-    "year_published": null,
-    "subjects": [],
-    "open_library_work_key": null,
-    "open_library_edition_key": null,
-    "match_confidence": "none",
-    "error": "No results found",
-    "fetched_at": "2026-01-27T17:28:17.271748Z"
+    "isbn": "9780865164505",
+    "year_published": 1481,
+    "subjects": [
+      "Antiquities",
+      "Bibliography",
+      "Biography",
+      "Campaigns",
+      "Crossing of the Alps, 218 B.C.",
+      "Early works to 1800",
+      "Histoire",
+      "Historiography",
+      "History",
+      "Latin language"
+    ],
+    "open_library_work_key": "/works/OL1261147W",
+    "open_library_edition_key": "OL8315766M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:23.942839Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL1261147W"
   },
   "the gallic war|caesar": {
     "official_title": "The Gallic Wars",
@@ -5458,15 +5775,28 @@
     "fetched_at": "2026-01-27T17:28:26.090159Z"
   },
   "the city of the sun|tommaso campanella": {
-    "official_title": "New Atlantis and the City of the Sun",
-    "official_author": "Francis Bacon, Tommaso Campanella",
-    "isbn": "9781507731031",
-    "year_published": 2015,
-    "subjects": [],
-    "open_library_work_key": "/works/OL41048795W",
-    "open_library_edition_key": "OL55771088M",
-    "match_confidence": "medium",
-    "fetched_at": "2026-01-27T17:28:27.583994Z"
+    "official_title": "La citt\u00e0 del sole",
+    "official_author": null,
+    "isbn": "9781979845656",
+    "year_published": 1981,
+    "subjects": [
+      "Utopias",
+      "Early works to 1800",
+      "Utopies",
+      "Poetry (poetic works by one author)",
+      "Italian literature",
+      "History and criticism",
+      "Stato",
+      "Teorie",
+      "Opere del 17. sec",
+      "Utopia"
+    ],
+    "open_library_work_key": "/works/OL752625W",
+    "open_library_edition_key": "OL55956470M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:43:25.444513Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL752625W"
   },
   "on crimes and punishments|cesare beccaria": {
     "official_title": "Essay on Crimes and Punishments",
@@ -5500,5 +5830,34 @@
     "open_library_edition_key": "OL53236506M",
     "match_confidence": "high",
     "fetched_at": "2026-01-27T17:28:31.906768Z"
+  },
+  "mastering metrics|angrist": {
+    "official_title": "Mastering 'Metrics",
+    "official_author": null,
+    "isbn": "9781400852383",
+    "year_published": null,
+    "subjects": [
+      "Econometrics"
+    ],
+    "open_library_work_key": "/works/OL25384169W",
+    "open_library_edition_key": "OL34022549M",
+    "match_confidence": "work_override",
+    "fetched_at": "2026-01-28T00:42:43.708075Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": "OL25384169W"
+  },
+  "london and the 17th century|margaret lincoln": {
+    "official_title": null,
+    "official_author": null,
+    "isbn": null,
+    "year_published": null,
+    "subjects": [],
+    "open_library_work_key": null,
+    "open_library_edition_key": null,
+    "match_confidence": "none",
+    "error": "No results found",
+    "fetched_at": "2026-01-28T00:43:19.604407Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": null
   }
 }
