@@ -127,6 +127,39 @@ def make_search_text(title: str, author: str, genres: List[str]) -> str:
     return ' '.join(parts).lower()
 
 
+def format_author_surname_first(name: str) -> str:
+    """
+    Convert author name to 'Surname, Name' format.
+    If already contains a comma, assume it's already formatted correctly.
+    Handles multiple authors separated by ', ' (after initial check).
+    """
+    if not name:
+        return name
+
+    # If there's a comma, assume it's already in surname-first format
+    # or it's multiple authors already formatted
+    if ',' in name:
+        return name
+
+    # Split by common multi-author separators
+    # Handle " and " or " & " for multiple authors
+    if ' and ' in name.lower():
+        parts = name.split(' and ')
+        return ', '.join(format_author_surname_first(p.strip()) for p in parts)
+    if ' & ' in name:
+        parts = name.split(' & ')
+        return ', '.join(format_author_surname_first(p.strip()) for p in parts)
+
+    # Single author: "First Middle Last" -> "Last, First Middle"
+    words = name.strip().split()
+    if len(words) <= 1:
+        return name  # Single word name, return as-is
+
+    surname = words[-1]
+    given_names = ' '.join(words[:-1])
+    return f"{surname}, {given_names}"
+
+
 def build_books_json(books: List[Dict], cache: Dict) -> Dict:
     """Merge user data with enrichment cache and generate final JSON."""
     print(f"\nBuilding books.json...")
@@ -142,7 +175,8 @@ def build_books_json(books: List[Dict], cache: Dict) -> Dict:
 
         # Use official title/author from enrichment, fallback to user values
         display_title = enrichment.get('official_title') or book['title']
-        display_author = enrichment.get('official_author') or book['author']
+        raw_author = enrichment.get('official_author') or book['author']
+        display_author = format_author_surname_first(raw_author)
 
         # Clean genres
         genres = clean_genres(enrichment.get('subjects', []))
