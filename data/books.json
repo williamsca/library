@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-30T06:49:55.693231Z",
-  "count": 323,
+  "generated_at": "2026-01-31T06:39:01.046566Z",
+  "count": 324,
   "books": [
     {
       "id": "2feb0277",
@@ -7388,6 +7388,31 @@
       "open_library_url": "https://openlibrary.org/works/OL39116745W",
       "match_confidence": "high",
       "search_text": "foucault's pendulum eco, umberto"
+    },
+    {
+      "id": "57f481a6",
+      "title": "The Orphan Master's Son",
+      "author": "Johnson, Adam",
+      "user_title": "The Orphan Master\u2019s Son",
+      "user_author": "Adam Johnson",
+      "isbn": "9783518730690",
+      "year_published": 2012,
+      "genres": [
+        "Totalitarianism",
+        "Pulitzer Prize Winner",
+        "New York Times Bestseller",
+        "Roman",
+        "Amerikanisches Englisch"
+      ],
+      "geo_region": null,
+      "sort_year": null,
+      "sort_basis": null,
+      "read_by_colin": false,
+      "read_by_kaitlyn": false,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9783518730690-M.jpg",
+      "open_library_url": "https://openlibrary.org/works/OL16419990W",
+      "match_confidence": "high",
+      "search_text": "the orphan master's son johnson, adam totalitarianism pulitzer prize winner new york times bestseller roman amerikanisches englisch"
     }
   ]
 }
