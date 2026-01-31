@@ -53,8 +53,8 @@ def parse_csv(csv_content: str) -> List[Dict]:
 
     for i, row in enumerate(reader, start=2):  # start at 2 for line numbers (after header)
         # Required fields
-        title = row.get('title', '').strip()
-        author = row.get('author', '').strip()
+        title = row.get('user_title', '').strip()
+        author = row.get('user_author', '').strip()
 
         if not title or not author:
             print(f"  ⚠ Skipping row {i}: missing title or author")
@@ -65,7 +65,6 @@ def parse_csv(csv_content: str) -> List[Dict]:
             'title': title,
             'author': author,
             'isbn_override': row.get('isbn_override', '').strip() or None,
-            'olid_work_override': row.get('olid_work_override', '').strip() or None,
             'geo_region': row.get('geo_region', '').strip() or None,
             'sort_year': row.get('sort_year', '').strip() or None,
             'sort_basis': row.get('sort_basis', '').strip() or None,
@@ -106,18 +105,11 @@ def generate_id(book: Dict) -> str:
     return hashlib.sha256(key.encode()).hexdigest()[:8]
 
 
-def make_cover_url(isbn: Optional[str]) -> Optional[str]:
-    """Generate Open Library cover URL from ISBN."""
-    if isbn:
-        return f"https://covers.openlibrary.org/b/isbn/{isbn}-M.jpg"
-    return None
-
-
-def make_ol_url(enrichment: Dict) -> Optional[str]:
-    """Generate Open Library book page URL."""
-    work_key = enrichment.get('open_library_work_key')
-    if work_key:
-        return f"https://openlibrary.org{work_key}"
+def make_books_url(enrichment: Dict) -> Optional[str]:
+    """Generate Google Books page URL."""
+    volume_id = enrichment.get('google_books_volume_id')
+    if volume_id:
+        return f"https://books.google.com/books?id={volume_id}"
     return None
 
 
@@ -195,8 +187,8 @@ def build_books_json(books: List[Dict], cache: Dict) -> Dict:
             'sort_basis': book.get('sort_basis'),
             'read_by_colin': book.get('read_by_colin', False),
             'read_by_kaitlyn': book.get('read_by_kaitlyn', False),
-            'cover_url': make_cover_url(isbn),
-            'open_library_url': make_ol_url(enrichment),
+            'cover_url': enrichment.get('cover_url'),
+            'books_url': make_books_url(enrichment),
             'match_confidence': enrichment.get('match_confidence', 'none'),
             'search_text': make_search_text(display_title, display_author, genres)
         }
@@ -256,25 +248,21 @@ def main():
         cache_key = make_cache_key(book['title'], book['author'])
         current_isbn_override = book.get('isbn_override')
 
-        current_olid_work_override = book.get('olid_work_override')
-
         # Need enrichment if:
         # 1. Not in cache at all, OR
         # 2. isbn_override has changed, OR
-        # 3. olid_work_override has changed
+        # 3. Legacy cache entry missing google_books_volume_id (migration)
         if cache_key not in cache:
             to_enrich.append(book)
         else:
-            cached_isbn_override = cache[cache_key].get('isbn_override_used')
-            cached_olid_work_override = cache[cache_key].get('olid_work_override_used')
+            cached = cache[cache_key]
 
-            if current_isbn_override != cached_isbn_override:
+            if current_isbn_override != cached.get('isbn_override_used'):
                 print(f"  ↻ isbn_override changed for '{book['title']}': "
-                      f"{cached_isbn_override or 'None'} → {current_isbn_override or 'None'}")
+                      f"{cached.get('isbn_override_used') or 'None'} → {current_isbn_override or 'None'}")
                 to_enrich.append(book)
-            elif current_olid_work_override != cached_olid_work_override:
-                print(f"  ↻ olid_work_override changed for '{book['title']}': "
-                      f"{cached_olid_work_override or 'None'} → {current_olid_work_override or 'None'}")
+            elif not cached.get('google_books_volume_id'):
+                print(f"  ↻ Re-enriching '{book['title']}': migrating to Google Books")
                 to_enrich.append(book)
 
     print(f"\nBooks needing enrichment: {len(to_enrich)}")
@@ -289,7 +277,6 @@ def main():
             cache_key = make_cache_key(book['title'], book['author'])
             if cache_key in new_enrichments:
                 new_enrichments[cache_key]['isbn_override_used'] = book.get('isbn_override')
-                new_enrichments[cache_key]['olid_work_override_used'] = book.get('olid_work_override')
 
         cache.update(new_enrichments)
 

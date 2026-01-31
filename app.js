@@ -90,8 +90,8 @@ function createBookEntry(book) {
     : '';
 
   const titleText = toTitleCase(book.title);
-  const titleContent = book.open_library_url
-    ? `<a href="${book.open_library_url}" target="_blank" rel="noopener">${escapeHtml(titleText)}</a>`
+  const titleContent = book.books_url
+    ? `<a href="${book.books_url}" target="_blank" rel="noopener">${escapeHtml(titleText)}</a>`
     : escapeHtml(titleText);
 
   return `

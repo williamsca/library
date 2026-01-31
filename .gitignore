@@ -3,12 +3,16 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
+# json export
+data/library_export.csv
+
 # Ruby dependencies
 .bundle/
 vendor/
 
 # Environment files
 .env
+.Renviron
 
 # OS generated files
 .DS_Store

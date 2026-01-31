@@ -1,29 +1,27 @@
 #!/usr/bin/env python3
 """
-Open Library API enrichment client.
-Fetches metadata for books by title and author.
+Google Books API enrichment client.
+Fetches metadata for books by ISBN or title/author search.
 """
 
+import os
+import re
 import requests
+import sys
 import time
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
+from pathlib import Path
 from typing import Dict, List, Optional
 
 
 # Subjects to ignore (too generic or not useful)
 IGNORE_SUBJECTS = {
-    'accessible book',
-    'protected daisy',
-    'in library',
-    'overdrive',
     'fiction',
     'nonfiction',
     'general',
     'literary',
     'literature',
-    'open library staff picks',
-    'lending library',
 }
 
 # Map variations to canonical names
@@ -47,24 +45,46 @@ SUBJECT_MAP = {
 }
 
 
+def load_api_key() -> str:
+    """Load Google Books API key from environment or .Renviron."""
+    key = os.environ.get('GOOGLE_BOOKS_API_KEY')
+    if key:
+        return key
+
+    # Fallback: parse .Renviron at repo root
+    renviron_path = Path(__file__).parent.parent / '.Renviron'
+    if renviron_path.exists():
+        with open(renviron_path) as f:
+            for line in f:
+                line = line.strip()
+                if line.startswith('GOOGLE_BOOKS_API_KEY='):
+                    return line.split('=', 1)[1].strip()
+
+    print("✗ GOOGLE_BOOKS_API_KEY not found in env or .Renviron", file=sys.stderr)
+    sys.exit(1)
+
+
+API_KEY = load_api_key()
+
+
 def make_cache_key(title: str, author: str) -> str:
     """Create normalized cache key from title and author."""
     return f"{title.lower().strip()}|{author.lower().strip()}"
 
 
-def compute_match_score(query_title: str, query_author: str, doc: dict) -> float:
+def compute_match_score(query_title: str, query_author: str, result_title: str, result_authors: List[str]) -> float:
     """Score 0-1 based on title and author similarity."""
     title_score = SequenceMatcher(
         None,
         query_title.lower(),
-        doc.get('title', '').lower()
+        result_title.lower()
     ).ratio()
 
-    doc_authors = ' '.join(doc.get('author_name', [])).lower()
+    result_author_str = ' '.join(result_authors).lower()
     author_score = SequenceMatcher(
         None,
         query_author.lower(),
-        doc_authors
+        result_author_str
     ).ratio()
 
     # Weight title slightly higher
@@ -76,7 +96,6 @@ def select_best_isbn(isbn_list: List[str]) -> Optional[str]:
     if not isbn_list:
         return None
 
-    # Filter and prefer ISBN-13
     isbn_13 = [i for i in isbn_list if len(i) == 13 and i.isdigit()]
     isbn_10 = [i for i in isbn_list if len(i) == 10]
 
@@ -93,10 +112,8 @@ def clean_genres(subjects: List[str]) -> List[str]:
     seen = set()
 
     for subject in subjects:
-        # Lowercase for comparison
         lower = subject.lower().strip()
 
-        # Skip ignored
         if lower in IGNORE_SUBJECTS:
             continue
 
@@ -119,143 +136,89 @@ def clean_genres(subjects: List[str]) -> List[str]:
     return cleaned[:5]  # Limit to 5 genres
 
 
-def enrich_by_work(work_id: str, title: str, author: str) -> dict:
-    """
-    Fetch book data by Open Library work ID.
-    work_id can be full path (/works/OL123W) or just the ID (OL123W).
-    """
-    # Normalize: strip /works/ prefix if present
-    work_key = work_id.strip('/')
-    if not work_key.startswith('works/'):
-        work_key = f'works/{work_id}'
+def extract_volume_data(item: dict) -> dict:
+    """Extract normalized metadata from a Google Books volume item."""
+    info = item.get('volumeInfo', {})
 
-    print(f"  Querying by work: {work_key} ({title})")
+    # ISBNs from industryIdentifiers array
+    identifiers = info.get('industryIdentifiers', [])
+    isbn_list = [i['identifier'] for i in identifiers if i.get('type') in ('ISBN_13', 'ISBN_10')]
+    isbn = select_best_isbn(isbn_list)
 
-    try:
-        response = requests.get(
-            f'https://openlibrary.org/{work_key}.json',
-            timeout=10
-        )
-        response.raise_for_status()
-        work_data = response.json()
+    # Year from publishedDate (can be "2011", "2011-09", or "2011-09-27")
+    year_published = None
+    pub_date = info.get('publishedDate', '')
+    if pub_date:
+        match = re.search(r'\d{4}', pub_date)
+        if match:
+            year_published = int(match.group())
 
-        # Get editions to find an ISBN and cover
-        editions_response = requests.get(
-            f'https://openlibrary.org/{work_key}/editions.json',
-            params={'limit': 5},
-            timeout=10
-        )
-        editions = editions_response.json().get('entries', [])
+    # Cover URL (API returns http, upgrade to https)
+    cover_url = info.get('imageLinks', {}).get('thumbnail')
+    if cover_url:
+        cover_url = cover_url.replace('http://', 'https://')
 
-        # Find best ISBN from editions
-        isbn = None
-        edition_key = None
-        for ed in editions:
-            edition_key = ed.get('key', '').split('/')[-1]
-            isbns = ed.get('isbn_13', []) + ed.get('isbn_10', [])
-            if isbns:
-                isbn = isbns[0]
-                break
+    authors = info.get('authors', [])
 
-        # Extract metadata from work
-        official_title = work_data.get('title')
-        # Authors require separate fetch; fallback to user-provided
+    return {
+        'official_title': info.get('title'),
+        'official_author': ', '.join(authors) if authors else None,
+        'isbn': isbn,
+        'year_published': year_published,
+        'subjects': info.get('categories', [])[:10],
+        'google_books_volume_id': item.get('id'),
+        'cover_url': cover_url,
+    }
 
-        subjects = work_data.get('subjects', [])
 
-        # Parse first_publish_date to extract year
-        year_published = None
-        first_publish = work_data.get('first_publish_date')
-        if first_publish:
-            import re
-            match = re.search(r'\d{4}', str(first_publish))
-            if match:
-                year_published = int(match.group())
-
-        print(f"    ✓ Found by work: {official_title}")
-
-        return {
-            'official_title': official_title,
-            'official_author': None,  # Would need separate author fetch
-            'isbn': isbn,
-            'year_published': year_published,
-            'subjects': subjects[:10],
-            'open_library_work_key': f'/{work_key}',
-            'open_library_edition_key': edition_key,
-            'match_confidence': 'work_override',
-            'fetched_at': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
-        }
-
-    except requests.RequestException as e:
-        print(f"    ✗ Work API error: {e}")
-        return enrich_book(title, author)  # Fallback to search
+def _empty_result(error: Optional[str] = None) -> dict:
+    """Return a blank enrichment result, optionally with an error message."""
+    result = {
+        'official_title': None,
+        'official_author': None,
+        'isbn': None,
+        'year_published': None,
+        'subjects': [],
+        'google_books_volume_id': None,
+        'cover_url': None,
+        'match_confidence': 'none',
+        'fetched_at': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+    }
+    if error:
+        result['error'] = error
+    return result
 
 
 def enrich_by_isbn(isbn: str, title: str, author: str) -> dict:
-    """
-    Fetch book data directly by ISBN from Open Library.
-    Returns enrichment data dictionary.
-    """
+    """Fetch book data by ISBN from Google Books."""
     print(f"  Querying by ISBN: {isbn} ({title})")
 
     try:
-        # Fetch book data by ISBN
         response = requests.get(
-            f'https://openlibrary.org/api/books',
+            'https://www.googleapis.com/books/v1/volumes',
             params={
-                'bibkeys': f'ISBN:{isbn}',
-                'format': 'json',
-                'jscmd': 'data'
+                'q': f'isbn:{isbn}',
+                'maxResults': 1,
+                'key': API_KEY,
             },
             timeout=10
         )
         response.raise_for_status()
         data = response.json()
 
-        isbn_key = f'ISBN:{isbn}'
-        if isbn_key not in data:
+        items = data.get('items', [])
+        if not items:
             print(f"    ⚠ ISBN not found, falling back to title/author search")
             return enrich_book(title, author)
 
-        book_data = data[isbn_key]
+        result = extract_volume_data(items[0])
+        # Keep the queried ISBN if Google didn't return one in identifiers
+        result['isbn'] = result['isbn'] or isbn
+        result['match_confidence'] = 'isbn'
+        result['fetched_at'] = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
 
-        # Extract metadata
-        official_title = book_data.get('title')
-        authors = book_data.get('authors', [])
-        official_author = ', '.join([a.get('name', '') for a in authors]) if authors else None
-
-        # Get subjects
-        subjects = []
-        if 'subjects' in book_data:
-            subjects = [s.get('name', s) if isinstance(s, dict) else s for s in book_data['subjects']]
-
-        # Get work key
-        work_key = None
-        if 'works' in book_data and book_data['works']:
-            work_key = book_data['works'][0].get('key')
-
-        # Get publish year
-        year_published = None
-        if 'publish_date' in book_data:
-            # Try to extract year from publish_date
-            import re
-            match = re.search(r'\d{4}', book_data['publish_date'])
-            if match:
-                year_published = int(match.group())
-
-        print(f"    ✓ Found by ISBN: {official_title}")
-
-        return {
-            'official_title': official_title,
-            'official_author': official_author,
-            'isbn': isbn,
-            'year_published': year_published,
-            'subjects': subjects[:10],
-            'open_library_work_key': work_key,
-            'open_library_edition_key': book_data.get('key', '').split('/')[-1] if 'key' in book_data else None,
-            'match_confidence': 'isbn',  # Special confidence level for ISBN matches
-            'fetched_at': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
-        }
+        print(f"    ✓ Found by ISBN: {result['official_title']}")
+        return result
 
     except requests.RequestException as e:
         print(f"    ✗ API error, falling back to title/author search: {e}")
@@ -263,52 +226,41 @@ def enrich_by_isbn(isbn: str, title: str, author: str) -> dict:
 
 
 def enrich_book(title: str, author: str) -> dict:
-    """
-    Query Open Library API for a single book.
-    Returns enrichment data dictionary.
-    """
+    """Query Google Books API for a single book by title and author."""
     print(f"  Querying: {title} by {author}")
 
     try:
-        # Query API
-        params = {
-            'title': title,
-            'author': author,
-            'limit': 5,
-            'fields': 'key,title,author_name,first_publish_year,isbn,subject,edition_key'
-        }
         response = requests.get(
-            'https://openlibrary.org/search.json',
-            params=params,
+            'https://www.googleapis.com/books/v1/volumes',
+            params={
+                'q': f'intitle:{title} inauthor:{author}',
+                'maxResults': 5,
+                'key': API_KEY,
+            },
             timeout=10
         )
         response.raise_for_status()
         data = response.json()
 
-        if data['numFound'] == 0:
+        items = data.get('items', [])
+        if not items:
             print(f"    ⚠ No results found")
-            return {
-                'official_title': None,
-                'official_author': None,
-                'isbn': None,
-                'year_published': None,
-                'subjects': [],
-                'open_library_work_key': None,
-                'open_library_edition_key': None,
-                'match_confidence': 'none',
-                'error': 'No results found',
-                'fetched_at': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
-            }
+            return _empty_result('No results found')
 
         # Score and rank results
-        best_match = None
+        best_item = None
         best_score = 0
 
-        for doc in data['docs']:
-            score = compute_match_score(title, author, doc)
+        for item in items:
+            info = item.get('volumeInfo', {})
+            score = compute_match_score(
+                title, author,
+                info.get('title', ''),
+                info.get('authors', [])
+            )
             if score > best_score:
                 best_score = score
-                best_match = doc
+                best_item = item
 
         # Determine confidence
         if best_score >= 0.9:
@@ -320,43 +272,16 @@ def enrich_book(title: str, author: str) -> dict:
         else:
             confidence = 'none'
 
-        # Extract best ISBN
-        isbn = select_best_isbn(best_match.get('isbn', []))
+        result = extract_volume_data(best_item)
+        result['match_confidence'] = confidence
+        result['fetched_at'] = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
 
-        # Extract official title and author
-        official_title = best_match.get('title')
-        author_names = best_match.get('author_name', [])
-        official_author = ', '.join(author_names) if author_names else None
-
-        print(f"    ✓ Found: {official_title} ({confidence} confidence)")
-
-        # Return enrichment data
-        return {
-            'official_title': official_title,
-            'official_author': official_author,
-            'isbn': isbn,
-            'year_published': best_match.get('first_publish_year'),
-            'subjects': best_match.get('subject', [])[:10],  # limit to top 10
-            'open_library_work_key': best_match.get('key'),
-            'open_library_edition_key': best_match.get('edition_key', [None])[0],
-            'match_confidence': confidence,
-            'fetched_at': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
-        }
+        print(f"    ✓ Found: {result['official_title']} ({confidence} confidence)")
+        return result
 
     except requests.RequestException as e:
         print(f"    ✗ API error: {e}")
-        return {
-            'official_title': None,
-            'official_author': None,
-            'isbn': None,
-            'year_published': None,
-            'subjects': [],
-            'open_library_work_key': None,
-            'open_library_edition_key': None,
-            'match_confidence': 'none',
-            'error': f'API error: {str(e)}',
-            'fetched_at': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
-        }
+        return _empty_result(f'API error: {str(e)}')
 
 
 def enrich_books(books: List[dict]) -> Dict[str, dict]:
@@ -371,19 +296,14 @@ def enrich_books(books: List[dict]) -> Dict[str, dict]:
 
     for i, book in enumerate(books):
         if i > 0:
-            # Rate limiting: 1 request per second
+            # Rate limiting
             time.sleep(1.1)
 
         cache_key = make_cache_key(book['title'], book['author'])
-
-        # Use override-based enrichment if provided, otherwise search by title/author
         isbn_override = book.get('isbn_override')
-        olid_work_override = book.get('olid_work_override')
 
         if isbn_override:
             results[cache_key] = enrich_by_isbn(isbn_override, book['title'], book['author'])
-        elif olid_work_override:
-            results[cache_key] = enrich_by_work(olid_work_override, book['title'], book['author'])
         else:
             results[cache_key] = enrich_book(book['title'], book['author'])
 
