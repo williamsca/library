@@ -5859,5 +5859,29 @@
     "fetched_at": "2026-01-28T00:43:19.604407Z",
     "isbn_override_used": null,
     "olid_work_override_used": null
+  },
+  "the orphan master\u2019s son|adam johnson": {
+    "official_title": "The Orphan Master's Son",
+    "official_author": "Adam Johnson",
+    "isbn": "9783518730690",
+    "year_published": 2012,
+    "subjects": [
+      "Totalitarianism",
+      "Pulitzer Prize Winner",
+      "Fiction",
+      "New York Times bestseller",
+      "nyt:hardcover_fiction=2012-02-11",
+      "Roman",
+      "Amerikanisches Englisch",
+      "Thriller",
+      "Man-woman relationships",
+      "Orphans"
+    ],
+    "open_library_work_key": "/works/OL16419990W",
+    "open_library_edition_key": "OL32265330M",
+    "match_confidence": "high",
+    "fetched_at": "2026-01-31T06:39:01.037270Z",
+    "isbn_override_used": null,
+    "olid_work_override_used": null
   }
 }
