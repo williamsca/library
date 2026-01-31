@@ -42,6 +42,7 @@ jobs:
       - name: Fetch CSV and build JSON
         env:
           DROPBOX_URL: ${{ secrets.DROPBOX_CSV_URL }}
+          GOOGLE_BOOKS_API_KEY: ${{ secrets.GOOGLE_BOOKS_API_KEY }}
         run: |
           python scripts/build.py
 
