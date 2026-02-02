@@ -82,15 +82,27 @@ function render(books) {
 function createBookEntry(book) {
   const metaParts = [];
 
-  if (book.year_published) {
-    metaParts.push(book.year_published);
-  }
   if (book.geo_region) {
     metaParts.push(book.geo_region);
   }
+  if (book.year_published) {
+    metaParts.push(book.year_published);
+  }
 
-  const metaHtml = metaParts.length > 0
-    ? `<p class="book-meta">${metaParts.join('<span class="separator">·</span>')}</p>`
+  const readByParts = [];
+  if (book.read_by_colin) {
+    readByParts.push('𝒞');
+  }
+  if (book.read_by_kaitlyn) {
+    readByParts.push('𝒦');
+  }
+
+  const readByHtml = readByParts.length > 0
+    ? `<span class="read-by">${readByParts.join('<span class="separator">·</span>')}</span>`
+    : '';
+
+  const metaHtml = metaParts.length > 0 || readByParts.length > 0
+    ? `<p class="book-meta"><span>${metaParts.join('<span class="separator">·</span>')}</span>${readByHtml}</p>`
     : '';
 
   const titleText = toTitleCase(book.title);
@@ -100,18 +112,11 @@ function createBookEntry(book) {
 
   return `
     <div class="book-entry">
-      <p class="book-author">${escapeHtml(formatAuthorFirstLast(book.author))}</p>
+      <p class="book-author">${escapeHtml(book.author)}</p>
       <p class="book-title">${titleContent}</p>
       ${metaHtml}
     </div>
   `;
-}
-
-// Convert "Last, First" to "First Last"
-function formatAuthorFirstLast(author) {
-  if (!author || !author.includes(',')) return author;
-  const [last, first] = author.split(',').map(s => s.trim());
-  return first ? `${first} ${last}` : last;
 }
 
 // Escape HTML to prevent XSS
