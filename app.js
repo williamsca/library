@@ -14,8 +14,12 @@ async function init() {
     const data = await response.json();
     allBooks = data.books;
 
-    // Sort by author by default
-    allBooks.sort((a, b) => a.author.localeCompare(b.author));
+    // Sort by geo_region, then sort_year by default
+    allBooks.sort((a, b) => {
+      const regionCompare = (a.geo_region || '').localeCompare(b.geo_region || '');
+      if (regionCompare !== 0) return regionCompare;
+      return (a.sort_year || 0) - (b.sort_year || 0);
+    });
 
     // Initialize Fuse.js for search
     fuse = new Fuse(allBooks, {
@@ -96,11 +100,18 @@ function createBookEntry(book) {
 
   return `
     <div class="book-entry">
-      <p class="book-author">${escapeHtml(book.author)}</p>
+      <p class="book-author">${escapeHtml(formatAuthorFirstLast(book.author))}</p>
       <p class="book-title">${titleContent}</p>
       ${metaHtml}
     </div>
   `;
+}
+
+// Convert "Last, First" to "First Last"
+function formatAuthorFirstLast(author) {
+  if (!author || !author.includes(',')) return author;
+  const [last, first] = author.split(',').map(s => s.trim());
+  return first ? `${first} ${last}` : last;
 }
 
 // Escape HTML to prevent XSS
