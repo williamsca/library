@@ -339,7 +339,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-03-02T06:57:53.439276Z",
+    "fetched_at": "2026-03-03T06:52:22.689709Z",
     "error": "No results found",
     "isbn_override_used": null
   },
@@ -352,7 +352,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-03-02T06:57:54.838045Z",
+    "fetched_at": "2026-03-03T06:52:24.074082Z",
     "error": "No results found",
     "isbn_override_used": null
   },
@@ -1451,7 +1451,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-03-02T06:57:56.214230Z",
+    "fetched_at": "2026-03-03T06:52:25.407093Z",
     "error": "No results found",
     "isbn_override_used": null
   },
@@ -2976,7 +2976,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-03-02T06:57:57.502194Z",
+    "fetched_at": "2026-03-03T06:52:26.785828Z",
     "error": "No results found",
     "isbn_override_used": null
   },
@@ -3171,7 +3171,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-03-02T06:57:58.866989Z",
+    "fetched_at": "2026-03-03T06:52:28.146404Z",
     "error": "No results found",
     "isbn_override_used": null
   },
@@ -3254,7 +3254,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-03-02T06:58:00.187636Z",
+    "fetched_at": "2026-03-03T06:52:29.529796Z",
     "error": "No results found",
     "isbn_override_used": null
   },
@@ -3799,7 +3799,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-03-02T06:58:01.517318Z",
+    "fetched_at": "2026-03-03T06:52:30.896221Z",
     "error": "No results found",
     "isbn_override_used": null
   },
