@@ -339,8 +339,8 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-03-18T07:02:01.281957Z",
-    "error": "API error: HTTPSConnectionPool(host='www.googleapis.com', port=443): Read timed out. (read timeout=10)",
+    "fetched_at": "2026-03-19T06:57:52.902525Z",
+    "error": "No results found",
     "isbn_override_used": null
   },
   "aristotle: poetics / longinus: on the sublime / demetrius: on style (loeb classical library)|various (loeb classical library)": {
@@ -352,8 +352,8 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-03-18T07:02:12.447376Z",
-    "error": "API error: HTTPSConnectionPool(host='www.googleapis.com', port=443): Read timed out. (read timeout=10)",
+    "fetched_at": "2026-03-19T06:57:54.669277Z",
+    "error": "No results found",
     "isbn_override_used": null
   },
   "cornelius nepos (loeb classical library)|cornelius nepos": {
@@ -1451,8 +1451,8 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-03-18T07:02:23.613060Z",
-    "error": "API error: HTTPSConnectionPool(host='www.googleapis.com', port=443): Read timed out. (read timeout=10)",
+    "fetched_at": "2026-03-19T06:57:56.001765Z",
+    "error": "No results found",
     "isbn_override_used": null
   },
   "till we have faces|c.s. lewis": {
@@ -2976,8 +2976,8 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-03-18T07:02:34.780380Z",
-    "error": "API error: HTTPSConnectionPool(host='www.googleapis.com', port=443): Read timed out. (read timeout=10)",
+    "fetched_at": "2026-03-19T06:57:57.331363Z",
+    "error": "No results found",
     "isbn_override_used": null
   },
   "36 hours: usa & canada|the new york times": {
@@ -3171,8 +3171,8 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-03-18T07:02:45.948458Z",
-    "error": "API error: HTTPSConnectionPool(host='www.googleapis.com', port=443): Read timed out. (read timeout=10)",
+    "fetched_at": "2026-03-19T06:57:58.695852Z",
+    "error": "No results found",
     "isbn_override_used": null
   },
   "against everything|mark greif": {
@@ -3254,8 +3254,8 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-03-18T07:02:57.114233Z",
-    "error": "API error: HTTPSConnectionPool(host='www.googleapis.com', port=443): Read timed out. (read timeout=10)",
+    "fetched_at": "2026-03-19T06:58:00.057682Z",
+    "error": "No results found",
     "isbn_override_used": null
   },
   "mennonite community cookbook|mary emma showalter": {
@@ -3799,8 +3799,8 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-03-18T07:03:08.278764Z",
-    "error": "API error: HTTPSConnectionPool(host='www.googleapis.com', port=443): Read timed out. (read timeout=10)",
+    "fetched_at": "2026-03-19T06:58:01.504981Z",
+    "error": "No results found",
     "isbn_override_used": null
   },
   "the emperor of all maladies|siddhartha mukherjee": {
