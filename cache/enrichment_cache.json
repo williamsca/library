@@ -339,7 +339,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-02-02T07:02:41.993429Z",
+    "fetched_at": "2026-03-24T10:29:50.428339Z",
     "error": "No results found",
     "isbn_override_used": null
   },
@@ -352,7 +352,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-02-02T07:02:43.412226Z",
+    "fetched_at": "2026-03-24T10:29:51.915967Z",
     "error": "No results found",
     "isbn_override_used": null
   },
@@ -1451,7 +1451,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-02-02T07:02:44.734709Z",
+    "fetched_at": "2026-03-24T10:29:54.988291Z",
     "error": "No results found",
     "isbn_override_used": null
   },
@@ -2976,7 +2976,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-02-02T07:02:46.157164Z",
+    "fetched_at": "2026-03-24T10:29:57.662832Z",
     "error": "No results found",
     "isbn_override_used": null
   },
@@ -3171,7 +3171,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-02-02T07:02:47.553979Z",
+    "fetched_at": "2026-03-24T10:30:00.534127Z",
     "error": "No results found",
     "isbn_override_used": null
   },
@@ -3254,7 +3254,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-02-02T07:02:48.914072Z",
+    "fetched_at": "2026-03-24T10:30:02.032073Z",
     "error": "No results found",
     "isbn_override_used": null
   },
@@ -3799,7 +3799,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-02-02T07:02:50.321646Z",
+    "fetched_at": "2026-03-24T10:30:06.427469Z",
     "error": "No results found",
     "isbn_override_used": null
   },
@@ -4630,5 +4630,101 @@
     "match_confidence": "isbn",
     "fetched_at": "2026-01-31T18:23:04.250880Z",
     "isbn_override_used": "9783518730690"
+  },
+  "a history of the world in 10\u00e2\u00bd chapters|julian barnes": {
+    "official_title": "A History of the World in 10 1/2 Chapters",
+    "official_author": "Julian Barnes",
+    "isbn": "9781850893486",
+    "year_published": 1990,
+    "subjects": [
+      "Large type books"
+    ],
+    "google_books_volume_id": "FTCUPwAACAAJ",
+    "cover_url": null,
+    "match_confidence": "high",
+    "fetched_at": "2026-03-24T10:29:53.636008Z",
+    "isbn_override_used": "679731377"
+  },
+  "in the distance|hern\u00e3\u00a1n d\u00e3\u00adaz": {
+    "official_title": "In the Distance",
+    "official_author": "Hern\u00e1n D\u00edaz",
+    "isbn": "9781566894883",
+    "year_published": 2017,
+    "subjects": [
+      "Fiction"
+    ],
+    "google_books_volume_id": "d7iDAQAACAAJ",
+    "cover_url": "https://books.google.com/books/content?id=d7iDAQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "match_confidence": "isbn",
+    "fetched_at": "2026-03-24T10:29:56.325530Z",
+    "isbn_override_used": "9781566894883"
+  },
+  "lakota america|pekka h\u00e3\u00a4m\u00e3\u00a4l\u00e3\u00a4inen": {
+    "official_title": "Lakota America",
+    "official_author": "Pekka H\u00e4m\u00e4l\u00e4inen",
+    "isbn": "9780300255256",
+    "year_published": 2020,
+    "subjects": [
+      "History"
+    ],
+    "google_books_volume_id": "nJltzQEACAAJ",
+    "cover_url": "https://books.google.com/books/content?id=nJltzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "match_confidence": "isbn",
+    "fetched_at": "2026-03-24T10:29:59.036775Z",
+    "isbn_override_used": "9780300255256"
+  },
+  "the anomaly|herv\u00e3\u00a9 le tellier": {
+    "official_title": "La anomal\u00eda",
+    "official_author": "Herv\u00e9 Le Tellier",
+    "isbn": "9789584294777",
+    "year_published": 2020,
+    "subjects": [],
+    "google_books_volume_id": "rGUk0AEACAAJ",
+    "cover_url": null,
+    "match_confidence": "isbn",
+    "fetched_at": "2026-03-24T10:30:03.459483Z",
+    "isbn_override_used": "9789584294777"
+  },
+  "love in the time of cholera|gabriel garc\u00e3\u00ada m\u00e3\u00a1rquez": {
+    "official_title": "Love in the Time of Cholera",
+    "official_author": "Gabriel Garc\u00eda M\u00e1rquez",
+    "isbn": "9780375400698",
+    "year_published": 1997,
+    "subjects": [
+      "Fiction"
+    ],
+    "google_books_volume_id": "iNuEDwAAQBAJ",
+    "cover_url": "https://books.google.com/books/content?id=iNuEDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "match_confidence": "high",
+    "fetched_at": "2026-03-24T10:30:04.979299Z",
+    "isbn_override_used": null
+  },
+  "the orphan master\u00e2\u0080\u0099s son|adam johnson": {
+    "official_title": "Das geraubte Leben des Waisen Jun Do",
+    "official_author": "Adam Johnson",
+    "isbn": "9783518730690",
+    "year_published": 2013,
+    "subjects": [
+      "Fiction"
+    ],
+    "google_books_volume_id": "Bh48CgAAQBAJ",
+    "cover_url": "https://books.google.com/books/content?id=Bh48CgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "match_confidence": "isbn",
+    "fetched_at": "2026-03-24T10:30:07.833740Z",
+    "isbn_override_used": "9783518730690"
+  },
+  "against the machine|paul kingsnorth": {
+    "official_title": "Against the Machine",
+    "official_author": "Paul Kingsnorth",
+    "isbn": "9780593850633",
+    "year_published": 2025,
+    "subjects": [
+      "Social Science"
+    ],
+    "google_books_volume_id": "qG1MEQAAQBAJ",
+    "cover_url": "https://books.google.com/books/content?id=qG1MEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "match_confidence": "isbn",
+    "fetched_at": "2026-03-24T10:30:09.218459Z",
+    "isbn_override_used": "9780593850633"
   }
 }

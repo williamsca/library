@@ -18,25 +18,11 @@ import requests
 from enrich import enrich_books, make_cache_key, clean_genres
 
 
-def transform_dropbox_url(url: str) -> str:
-    """Convert Dropbox share link to direct download URL."""
-    # Method 1: Change dl=0 to dl=1
-    if '?dl=0' in url:
-        return url.replace('?dl=0', '?dl=1')
-
-    # Method 2: Also handle other query params
-    if 'dl=0' in url:
-        return url.replace('dl=0', 'dl=1')
-
-    return url
-
-
 def fetch_csv(url: str) -> str:
     """Fetch CSV content from URL."""
-    print(f"Fetching CSV from Dropbox...")
+    print(f"Fetching CSV from Google Sheets...")
     try:
-        download_url = transform_dropbox_url(url)
-        response = requests.get(download_url, timeout=30)
+        response = requests.get(url, timeout=30)
         response.raise_for_status()
         print(f"✓ CSV fetched successfully")
         return response.text
@@ -217,7 +203,7 @@ def main():
     output_path = repo_root / 'data' / 'books.json'
 
     # 1. Fetch CSV
-    csv_url = 'https://www.dropbox.com/scl/fi/nxlkl090aewe3qvebr3f7/library.csv?rlkey=jv1we3yba15l5uf4u9ikwhl5x&st=vhy8dgyi&dl=0'
+    csv_url = 'https://docs.google.com/spreadsheets/d/1IzBWAPnUeUoSK6dnqa5I5CHNZQ9cxkcULmXC_Qy0VVM/export?format=csv'
     if csv_url:
         # Production: fetch from Dropbox
         csv_content = fetch_csv(csv_url)
