@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-22T06:52:05.984783Z",
-  "count": 324,
+  "generated_at": "2026-03-24T10:50:54.550097Z",
+  "count": 325,
   "books": [
     {
       "id": "2feb0277",
@@ -177,8 +177,8 @@
       "genres": [
         "History"
       ],
-      "geo_region": null,
-      "sort_year": null,
+      "geo_region": "Egypt",
+      "sort_year": "1177",
       "sort_basis": null,
       "read_by_colin": true,
       "read_by_kaitlyn": false,
@@ -1296,7 +1296,7 @@
       "isbn": "9781538709306",
       "year_published": 2022,
       "genres": [],
-      "geo_region": null,
+      "geo_region": "U.K.",
       "sort_year": null,
       "sort_basis": null,
       "read_by_colin": true,
@@ -1482,23 +1482,25 @@
       "search_text": "the sea banville, john authors"
     },
     {
-      "id": "964816a3",
+      "id": "0d9a886b",
       "title": "A History of the World in 10 1/2 Chapters",
       "author": "Barnes, Julian",
-      "user_title": "A History of the World in 10\u00bd Chapters",
+      "user_title": "A History of the World in 10\u00c2\u00bd Chapters",
       "user_author": "Julian Barnes",
       "isbn": "679731377",
-      "year_published": 2012,
-      "genres": [],
+      "year_published": 1990,
+      "genres": [
+        "Large Type Books"
+      ],
       "geo_region": "U.K.",
       "sort_year": null,
       "sort_basis": null,
       "read_by_colin": true,
       "read_by_kaitlyn": false,
-      "cover_url": "https://books.google.com/books/content?id=m6A7io8MZDgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "books_url": "https://books.google.com/books?id=m6A7io8MZDgC",
+      "cover_url": null,
+      "books_url": "https://books.google.com/books?id=FTCUPwAACAAJ",
       "match_confidence": "high",
-      "search_text": "a history of the world in 10 1/2 chapters barnes, julian"
+      "search_text": "a history of the world in 10 1/2 chapters barnes, julian large type books"
     },
     {
       "id": "69af505e",
@@ -3732,11 +3734,11 @@
       "search_text": "west with giraffes rutledge, lynda"
     },
     {
-      "id": "dbc334d7",
+      "id": "cef19b5f",
       "title": "In the Distance",
       "author": "D\u00edaz, Hern\u00e1n",
       "user_title": "In the Distance",
-      "user_author": "Hern\u00e1n D\u00edaz",
+      "user_author": "Hern\u00c3\u00a1n D\u00c3\u00adaz",
       "isbn": "9781566894883",
       "year_published": 2017,
       "genres": [],
@@ -4241,11 +4243,11 @@
       "search_text": "the many faces of realism putnam, hilary body, mind & spirit"
     },
     {
-      "id": "055be438",
+      "id": "b0fe1fd7",
       "title": "Lakota America",
       "author": "H\u00e4m\u00e4l\u00e4inen, Pekka",
       "user_title": "Lakota America",
-      "user_author": "Pekka H\u00e4m\u00e4l\u00e4inen",
+      "user_author": "Pekka H\u00c3\u00a4m\u00c3\u00a4l\u00c3\u00a4inen",
       "isbn": "9780300255256",
       "year_published": 2020,
       "genres": [
@@ -5200,11 +5202,11 @@
       "search_text": "la chartreuse de parme stendhal"
     },
     {
-      "id": "b001409d",
+      "id": "89f1a117",
       "title": "La anomal\u00eda",
       "author": "Tellier, Herv\u00e9 Le",
       "user_title": "The Anomaly",
-      "user_author": "Herv\u00e9 Le Tellier",
+      "user_author": "Herv\u00c3\u00a9 Le Tellier",
       "isbn": "9789584294777",
       "year_published": 2020,
       "genres": [],
@@ -5278,21 +5280,21 @@
       "search_text": "la peste camus, albert plague"
     },
     {
-      "id": "5c965e2a",
+      "id": "009757f8",
       "title": "Love in the Time of Cholera",
       "author": "M\u00e1rquez, Gabriel Garc\u00eda",
       "user_title": "Love in the Time of Cholera",
-      "user_author": "Gabriel Garc\u00eda M\u00e1rquez",
-      "isbn": "9781101911112",
-      "year_published": 2014,
+      "user_author": "Gabriel Garc\u00c3\u00ada M\u00c3\u00a1rquez",
+      "isbn": "9780375400698",
+      "year_published": 1997,
       "genres": [],
       "geo_region": "Colombia",
       "sort_year": null,
       "sort_basis": "publication",
       "read_by_colin": true,
       "read_by_kaitlyn": false,
-      "cover_url": "https://books.google.com/books/content?id=E7iFBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "books_url": "https://books.google.com/books?id=E7iFBAAAQBAJ",
+      "cover_url": "https://books.google.com/books/content?id=iNuEDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "books_url": "https://books.google.com/books?id=iNuEDwAAQBAJ",
       "match_confidence": "high",
       "search_text": "love in the time of cholera m\u00e1rquez, gabriel garc\u00eda"
     },
@@ -6542,10 +6544,10 @@
       "search_text": "foucault's pendulum (bca only) eco, umberto"
     },
     {
-      "id": "57f481a6",
+      "id": "95a7cb1c",
       "title": "Das geraubte Leben des Waisen Jun Do",
       "author": "Johnson, Adam",
-      "user_title": "The Orphan Master\u2019s Son",
+      "user_title": "The Orphan Master\u00e2\u0080\u0099s Son",
       "user_author": "Adam Johnson",
       "isbn": "9783518730690",
       "year_published": 2013,
@@ -6559,6 +6561,27 @@
       "books_url": "https://books.google.com/books?id=Bh48CgAAQBAJ",
       "match_confidence": "isbn",
       "search_text": "das geraubte leben des waisen jun do johnson, adam"
+    },
+    {
+      "id": "527b4952",
+      "title": "Against the Machine",
+      "author": "Kingsnorth, Paul",
+      "user_title": "Against the Machine",
+      "user_author": "Paul Kingsnorth",
+      "isbn": "9780593850633",
+      "year_published": 2025,
+      "genres": [
+        "Social Science"
+      ],
+      "geo_region": "Ireland",
+      "sort_year": "2025",
+      "sort_basis": "publication",
+      "read_by_colin": true,
+      "read_by_kaitlyn": false,
+      "cover_url": "https://books.google.com/books/content?id=qG1MEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "books_url": "https://books.google.com/books?id=qG1MEQAAQBAJ",
+      "match_confidence": "isbn",
+      "search_text": "against the machine kingsnorth, paul social science"
     }
   ]
 }
