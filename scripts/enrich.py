@@ -67,6 +67,11 @@ def load_api_key() -> str:
 API_KEY = load_api_key()
 
 
+def _sanitize_error(msg: str) -> str:
+    """Strip API key from error messages before storing in cache."""
+    return msg.replace(API_KEY, '[REDACTED]')
+
+
 def make_cache_key(title: str, author: str) -> str:
     """Create normalized cache key from title and author."""
     return f"{title.lower().strip()}|{author.lower().strip()}"
@@ -281,7 +286,7 @@ def enrich_book(title: str, author: str) -> dict:
 
     except requests.RequestException as e:
         print(f"    ✗ API error: {e}")
-        return _empty_result(f'API error: {str(e)}')
+        return _empty_result(_sanitize_error(f'API error: {str(e)}'))
 
 
 def enrich_books(books: List[dict]) -> Dict[str, dict]:

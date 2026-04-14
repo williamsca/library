@@ -2977,7 +2977,7 @@
     "cover_url": null,
     "match_confidence": "none",
     "fetched_at": "2026-04-14T07:45:37.052995Z",
-    "error": "API error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AWith+Love%2C+From+My+Kitchen+inauthor%3AFreda+Lapp&maxResults=5&key=AIzaSyC_l9QTyhHOVftQDx5YBecdNDMsAUHlp6c",
+    "error": "API error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AWith+Love%2C+From+My+Kitchen+inauthor%3AFreda+Lapp&maxResults=5",
     "isbn_override_used": null
   },
   "36 hours: usa & canada|the new york times": {
@@ -3172,7 +3172,7 @@
     "cover_url": null,
     "match_confidence": "none",
     "fetched_at": "2026-04-14T07:45:38.232536Z",
-    "error": "API error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AAgainst+Joie+de+Vivre+inauthor%3APhilip+Lopate&maxResults=5&key=AIzaSyC_l9QTyhHOVftQDx5YBecdNDMsAUHlp6c",
+    "error": "API error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AAgainst+Joie+de+Vivre+inauthor%3APhilip+Lopate&maxResults=5",
     "isbn_override_used": null
   },
   "against everything|mark greif": {
@@ -3255,7 +3255,7 @@
     "cover_url": null,
     "match_confidence": "none",
     "fetched_at": "2026-04-14T07:45:39.566276Z",
-    "error": "API error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AMennonite+in+a+Little+Black+Dress+inauthor%3ARuthie+Leavitt&maxResults=5&key=AIzaSyC_l9QTyhHOVftQDx5YBecdNDMsAUHlp6c",
+    "error": "API error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AMennonite+in+a+Little+Black+Dress+inauthor%3ARuthie+Leavitt&maxResults=5",
     "isbn_override_used": null
   },
   "mennonite community cookbook|mary emma showalter": {
