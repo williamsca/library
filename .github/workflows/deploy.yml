@@ -46,6 +46,13 @@ jobs:
         run: |
           python scripts/build.py
 
+      - name: Scan cache for secrets
+        run: |
+          if grep -qE 'AIza[0-9A-Za-z_-]{35}|[0-9a-zA-Z]{40}(?=.*key|.*token|.*secret)' cache/enrichment_cache.json; then
+            echo "ERROR: Possible secret detected in cache/enrichment_cache.json — aborting commit."
+            exit 1
+          fi
+
       - name: Commit cache updates
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
