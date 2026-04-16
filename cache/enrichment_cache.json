@@ -339,7 +339,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-04-15T07:45:40.078503Z",
+    "fetched_at": "2026-04-16T07:46:01.628185Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AOxford+Companion+to+Classical+Literature+inauthor%3AVarious&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   },
@@ -352,7 +352,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-04-15T07:45:41.274304Z",
+    "fetched_at": "2026-04-16T07:46:02.915347Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AAristotle%3A+Poetics+%2F+Longinus%3A+On+the+Sublime+%2F+Demetrius%3A+On+Style+%28Loeb+Classical+Library%29+inauthor%3AVarious+%28Loeb+Classical+Library%29&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   },
@@ -1451,7 +1451,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-04-15T07:45:42.462804Z",
+    "fetched_at": "2026-04-16T07:46:04.217619Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AA+Concise+History+of+Mathematics+inauthor%3AStrunk&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   },
@@ -2976,7 +2976,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-04-15T07:45:43.652685Z",
+    "fetched_at": "2026-04-16T07:46:05.648344Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AWith+Love%2C+From+My+Kitchen+inauthor%3AFreda+Lapp&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   },
@@ -3171,7 +3171,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-04-15T07:45:44.843552Z",
+    "fetched_at": "2026-04-16T07:46:06.941783Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AAgainst+Joie+de+Vivre+inauthor%3APhilip+Lopate&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   },
@@ -3254,7 +3254,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-04-15T07:45:46.049831Z",
+    "fetched_at": "2026-04-16T07:46:08.239028Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AMennonite+in+a+Little+Black+Dress+inauthor%3ARuthie+Leavitt&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   },
@@ -3799,7 +3799,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-04-15T07:45:47.377994Z",
+    "fetched_at": "2026-04-16T07:46:09.536367Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AEveryone+wants+to+go+to+heaven+but+nobody+wants+to+die+inauthor%3AAmy+Gutmann+and+Jonathan+D.+Moreno&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   },
