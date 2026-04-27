@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-26T07:39:19.531322Z",
-  "count": 325,
+  "generated_at": "2026-04-27T08:24:58.976314Z",
+  "count": 326,
   "books": [
     {
       "id": "2feb0277",
@@ -6582,6 +6582,25 @@
       "books_url": "https://books.google.com/books?id=qG1MEQAAQBAJ",
       "match_confidence": "isbn",
       "search_text": "against the machine kingsnorth, paul social science"
+    },
+    {
+      "id": "83d7f421",
+      "title": "The Art of Travel",
+      "author": "Botton, Alain de",
+      "user_title": "The Art of Travel",
+      "user_author": "Alain de Botton",
+      "isbn": null,
+      "year_published": null,
+      "genres": [],
+      "geo_region": "U.S. (East)",
+      "sort_year": null,
+      "sort_basis": "publication",
+      "read_by_colin": true,
+      "read_by_kaitlyn": false,
+      "cover_url": null,
+      "books_url": null,
+      "match_confidence": "none",
+      "search_text": "the art of travel botton, alain de"
     }
   ]
 }
