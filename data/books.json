@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-30T11:20:15.796899Z",
-  "count": 326,
+  "generated_at": "2026-08-31T12:48:24.927161Z",
+  "count": 327,
   "books": [
     {
       "id": "2feb0277",
@@ -6599,6 +6599,25 @@
       "books_url": null,
       "match_confidence": "none",
       "search_text": "the art of travel botton, alain de"
+    },
+    {
+      "id": "0013921d",
+      "title": "The Inheritance of Loss",
+      "author": "Desai, Kiran",
+      "user_title": "The Inheritance of Loss",
+      "user_author": "Kiran Desai",
+      "isbn": null,
+      "year_published": null,
+      "genres": [],
+      "geo_region": null,
+      "sort_year": null,
+      "sort_basis": null,
+      "read_by_colin": false,
+      "read_by_kaitlyn": false,
+      "cover_url": null,
+      "books_url": null,
+      "match_confidence": "none",
+      "search_text": "the inheritance of loss desai, kiran"
     }
   ]
 }
