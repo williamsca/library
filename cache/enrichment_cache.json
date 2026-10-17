@@ -339,7 +339,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-10-16T10:46:34.919414Z",
+    "fetched_at": "2026-10-17T10:12:10.842258Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AOxford+Companion+to+Classical+Literature+inauthor%3AVarious&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   },
@@ -352,7 +352,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-10-16T10:46:36.082888Z",
+    "fetched_at": "2026-10-17T10:12:12.002481Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AAristotle%3A+Poetics+%2F+Longinus%3A+On+the+Sublime+%2F+Demetrius%3A+On+Style+%28Loeb+Classical+Library%29+inauthor%3AVarious+%28Loeb+Classical+Library%29&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   },
@@ -1451,7 +1451,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-10-16T10:46:37.258975Z",
+    "fetched_at": "2026-10-17T10:12:13.162934Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AA+Concise+History+of+Mathematics+inauthor%3AStrunk&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   },
@@ -2976,7 +2976,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-10-16T10:46:38.422266Z",
+    "fetched_at": "2026-10-17T10:12:14.324128Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AWith+Love%2C+From+My+Kitchen+inauthor%3AFreda+Lapp&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   },
@@ -3171,7 +3171,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-10-16T10:46:39.584086Z",
+    "fetched_at": "2026-10-17T10:12:15.486639Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AAgainst+Joie+de+Vivre+inauthor%3APhilip+Lopate&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   },
@@ -3254,7 +3254,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-10-16T10:46:40.748349Z",
+    "fetched_at": "2026-10-17T10:12:16.648038Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AMennonite+in+a+Little+Black+Dress+inauthor%3ARuthie+Leavitt&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   },
@@ -3799,7 +3799,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-10-16T10:46:41.951459Z",
+    "fetched_at": "2026-10-17T10:12:17.805024Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AEveryone+wants+to+go+to+heaven+but+nobody+wants+to+die+inauthor%3AAmy+Gutmann+and+Jonathan+D.+Moreno&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   },
@@ -4736,7 +4736,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-10-16T10:46:43.112723Z",
+    "fetched_at": "2026-10-17T10:12:18.964905Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AThe+Art+of+Travel+inauthor%3AAlain+de+Botton&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   },
@@ -4749,7 +4749,7 @@
     "google_books_volume_id": null,
     "cover_url": null,
     "match_confidence": "none",
-    "fetched_at": "2026-10-16T10:46:44.287547Z",
+    "fetched_at": "2026-10-17T10:12:20.123352Z",
     "error": "API error: 400 Client Error: Bad Request for url: https://www.googleapis.com/books/v1/volumes?q=intitle%3AThe+Inheritance+of+Loss+inauthor%3AKiran+Desai&maxResults=5&key=[REDACTED]",
     "isbn_override_used": null
   }
